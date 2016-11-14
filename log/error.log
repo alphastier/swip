@@ -1,0 +1,57 @@
+[Thu Nov 10 11:17:47 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 11:18:05 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 11:18:35 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 11:19:13 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/index.hmtl
+[Thu Nov 10 11:28:43 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 11:28:51 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 11:30:39 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 11:30:43 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 11:30:44 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 11:30:45 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 11:30:46 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 11:32:22 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 11:32:41 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 11:36:50 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 11:37:07 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 11:38:08 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 11:40:37 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/swip
+[Thu Nov 10 12:20:51 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/swip
+[Thu Nov 10 12:20:59 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 12:21:03 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 12:22:06 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/web
+[Thu Nov 10 12:33:35 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/index.html
+[Thu Nov 10 12:33:37 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/index.html
+[Thu Nov 10 12:37:07 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/index.html
+[Thu Nov 10 13:00:43 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/jquery.mapit.css, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:00:49 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/jquery.mapit.css, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:01:09 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/jquery.mapit.css, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:01:19 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/jquery.mapit.css, referer: http://292859-4.web.fh-htwchur.ch/index.php
+[Thu Nov 10 13:02:27 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/jquery.mapit.css, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:09:06 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/jquery.mapit.css, referer: http://292859-4.web.fh-htwchur.ch/index.php
+[Thu Nov 10 13:16:22 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/jquery.mapit.css, referer: http://292859-4.web.fh-htwchur.ch/index.php
+[Thu Nov 10 13:23:50 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-sham.min.js, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:23:50 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-shim.min.js, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:23:50 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-shim.min.js, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:23:50 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-sham.min.js, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:25:54 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-sham.min.js, referer: http://292859-4.web.fh-htwchur.ch/index.php
+[Thu Nov 10 13:25:54 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-shim.min.js, referer: http://292859-4.web.fh-htwchur.ch/index.php
+[Thu Nov 10 13:25:54 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-shim.min.js, referer: http://292859-4.web.fh-htwchur.ch/index.php
+[Thu Nov 10 13:25:54 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-sham.min.js, referer: http://292859-4.web.fh-htwchur.ch/index.php
+[Thu Nov 10 13:26:28 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-shim.min.js, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:26:28 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-sham.min.js, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:26:34 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-shim.min.js, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:26:34 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-sham.min.js, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:26:35 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-shim.min.js, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:26:35 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-sham.min.js, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:34:05 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-shim.min.js, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:34:05 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-sham.min.js, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:36:50 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-sham.min.js, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:36:50 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-shim.min.js, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:36:50 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-shim.min.js, referer: http://292859-4.web.fh-htwchur.ch/
+[Thu Nov 10 13:36:50 2016] [error] [client 46.126.96.106] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-sham.min.js, referer: http://292859-4.web.fh-htwchur.ch/
+[Sat Nov 12 08:36:46 2016] [error] [client 147.87.0.207] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-shim.min.js, referer: http://292859-4.web.fh-htwchur.ch/index.php
+[Sat Nov 12 08:36:46 2016] [error] [client 147.87.0.207] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-sham.min.js, referer: http://292859-4.web.fh-htwchur.ch/index.php
+[Sat Nov 12 08:40:32 2016] [error] [client 147.87.0.207] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-shim.min.js, referer: http://292859-4.web.fh-htwchur.ch/index.php
+[Sat Nov 12 08:40:32 2016] [error] [client 147.87.0.207] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-sham.min.js, referer: http://292859-4.web.fh-htwchur.ch/index.php
+[Sat Nov 12 08:40:32 2016] [error] [client 147.87.0.207] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-shim.min.js, referer: http://292859-4.web.fh-htwchur.ch/index.php
+[Sat Nov 12 08:40:32 2016] [error] [client 147.87.0.207] File does not exist: /var/www/clients/client185/web1339/web/assets/es5-sham.min.js, referer: http://292859-4.web.fh-htwchur.ch/index.php
