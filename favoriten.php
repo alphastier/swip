@@ -63,8 +63,8 @@
 		<nav class="collapse navbar-collapse">
 			<!-- Main navigation -->
 			<ul id="headernavigation" class="nav navbar-nav">
-				<li class="active"><a href="#page-top">Events</a></li>
-                <li class="inactive"><a href="/favoriten.php">Favoriten</a></li>
+				<li class="inactive"><a href="#page-top">Events</a></li>
+                <li class="active"><a href="/favoriten.php">Favoriten</a></li>
 				<li class="inactive"><a href="#subscribe">FAQ</a></li>
 				<li class="inactive"><a href="#account">Account</a></li>
                 <li class="inactive"><a href="/index.php">Abmelden</a></li>
@@ -83,7 +83,7 @@
 				</h1><!-- /.site-title -->
 				<h3 class="section-name">
 					<span>
-						Events
+						Favoriten
 					</span>
 				</h3><!-- /.section-name -->
 
