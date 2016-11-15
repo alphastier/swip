@@ -22,7 +22,7 @@
 	<!--[if lt IE 9]>
 	<script src="assets/js/html5shiv.js"></script>
 	<![endif]-->
-    
+
     <!-- WhatsNearby jQuery Plugin -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
@@ -31,17 +31,17 @@
 <script src="assets/es5-sham.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 			$(document).ready(function(){
-				$("#wn1").whatsnearby({ 
+				$("#wn1").whatsnearby({
 					zoom:15,
 					width:"100%",
 					address: "32 Saint-Charles Ouest, Longueuil, Qc, Canada"
 				});
-				$("#wn1-1").whatsnearby({ 
+				$("#wn1-1").whatsnearby({
 					zoom:15,
 					width:"100%"
 				});
 
-				$("#wn2").whatsnearby({ 
+				$("#wn2").whatsnearby({
 					zoom:15,
 					width:"100%",
 					address: "Montreal",
@@ -49,7 +49,7 @@
 					placesTypes: [ 'restaurant', 'cafe', 'gym' ]
 				});
 
-				$("#wn3").whatsnearby({ 
+				$("#wn3").whatsnearby({
 					zoom:15,
 					width:"100%",
 					address: "Montreal",
@@ -58,7 +58,7 @@
 					excludePlacesTypes: ['bar']
 				});
 
-				$("#wn4").whatsnearby({ 
+				$("#wn4").whatsnearby({
 					zoom:15,
 					width:"100%",
 					address: "Montreal",
@@ -133,7 +133,7 @@
 				<div id="time_countdown" class="time-count-container">
 					<div class="next-section">
 					<a class="go-to-about"><span></span></a>
-					</div><!-- /.next-section -->
+				</div><!-- /.next-section -->
                 </div>
          	</div>
        	</div>
@@ -147,27 +147,36 @@
 			<div class="container">
 				<h3 class="section-name">
 					<span>
-						About Us
+						Login
 					</span>
 				</h3><!-- /.section-name -->
-				<h2 class="section-title">
-					We Are dedicated
-				</h2><!-- /.Section-title  -->
-				<p class="section-description">
-					Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-				</p><!-- /.section-description -->
+					<h2>	</h2>
 
-				<div class="team-container">
-                
+				<!-- Login-Formular -->
+			<div
+				<form id="login-form" action="index.php" method="post" role="form" style="display: block;">
+					<div class="form-group">
+						<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="E-Mail-Adresse" value="">
+					</div>
+					<div class="form-group">
+						<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Passwort">
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-6 col-sm-offset-3">
+								<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="einloggen">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+				<!-- Login-Formular -->
+				<div id="time_countdown" class="time-count-container">
+					<div class="next-section">
+					<a class="go-to-about"><span></span></a>
 
-	<div id="wrapper">
-		<div class="well">
-			<div id="wn1"></div>
-		</div>
-	</div>
-                
-                
-                
+
+
                 </div><!-- /.container -->
 		</div><!-- /.pattern -->
 
@@ -250,10 +259,10 @@
 			</p>
 		</footer>
 		<!-- Footer Section End -->
-        
+
         <!-- WhatsNear Map -->
-        
-        
+
+
 
 
 		<!-- jQuery Library -->
