@@ -73,7 +73,7 @@
 	<!-- Main Menu End -->
 
 
-	<!-- Page Top Section -->
+	<!-- Page Top Login Section -->
 	<section id="page-top" class="section-style" data-background-image="images/background/image1.jpg">
 		<div class="pattern height-resize">
 			<div class="container">
@@ -82,12 +82,32 @@
 				</h1><!-- /.site-title -->
 				<h3 class="section-name">
 					<span>
-						We Are
+						Login
 					</span>
 				</h3><!-- /.section-name -->
-				<h2 class="section-title">
-					quite awesome
+				<h2 >
 				</h2><!-- /.Section-title  -->
+
+				<!-- Login-Formular -->
+			<div
+				<form id="login-form" action="index.php" method="post" role="form" style="display: block;">
+					<div class="form-group">
+						<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="E-Mail-Adresse" value="">
+					</div>
+					<div class="form-group">
+						<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Passwort">
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-6 col-sm-offset-3">
+								<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="einloggen">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+				<!-- Login-Formular -->
+
 				<div id="time_countdown" class="time-count-container">
 					<div class="next-section">
 					<a class="go-to-about"><span></span></a>
@@ -99,7 +119,7 @@
 
 
 
-	<!-- About Us Section -->
+	<!-- Event Section -->
 	<section id="about" class="section-style" data-background-image="images/background/about-us.jpg">
 		<div class="pattern height-resize">
 			<div class="container">
@@ -138,7 +158,7 @@
 
 
 	</section><!-- /#about -->
-	<!-- About Us Section End -->
+	<!-- Event Section End -->
 
 
 
