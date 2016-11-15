@@ -33,6 +33,7 @@ Tags: HTML, Template, Coming Soon, Kite
 *    9.2 - media screen and (max-width: 768px)
 *    9.3 - media screen and (max-width: 1170px) 
 *  10 - Preloader
+*  11 - Fonts and Texts
 *
 ---------------------------------------------------------------------- */
 
@@ -1181,3 +1182,27 @@ background: #00aaff;
 /* 10 - Preloader End
 ---------------------------------------------------------------------- */
 
+/* 11 - Text and Fonts
+---------------------------------------------------------------------- */
+
+.event-font {
+	color: hsla(0,0%,0%,1.00);
+}
+.event-price {
+	margin-right: 5%;
+	float:right;
+}
+.event-date {
+	margin-left: 5%;
+}
+.event-place {
+	color: hsla(0,0%,0%,1.00);
+	margin-right: 5%;
+	float:right;
+}
+.event-starttime {
+	color: hsla(0,0%,0%,1.00);
+}
+.event-duration {
+	color: hsla(0,0%,0%,1.00);
+}

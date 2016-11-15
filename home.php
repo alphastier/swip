@@ -63,10 +63,11 @@
 		<nav class="collapse navbar-collapse">
 			<!-- Main navigation -->
 			<ul id="headernavigation" class="nav navbar-nav">
-				<li class="active"><a href="#page-top">Login</a></li>
-				<li><a href="#event">Events</a></li>
-				<li><a href="#subscribe">FAQ</a></li>
-				<li><a href="#contact"></a></li>
+				<li class="active"><a href="#page-top">Events</a></li>
+                <li class="active"><a href="/favoriten.php">Favoriten</a></li>
+				<li class="active"><a href="#subscribe">FAQ</a></li>
+				<li class="active"><a href="#account">Account</a></li>
+                <li class="active"><a href="/index.php">Abmelden</a></li>
 			</ul> <!-- /.nav .navbar-nav -->
 		</nav> <!-- /.navbar-collapse  -->
 	</div><!-- /#main-menu -->
@@ -82,86 +83,112 @@
 				</h1><!-- /.site-title -->
 				<h3 class="section-name">
 					<span>
-						Login
+						Events
 					</span>
 				</h3><!-- /.section-name -->
-				<h2 >
-				</h2><!-- /.Section-title  -->
 
-				<!-- Login-Formular -->
-			<div
-				<form id="login-form" action="index.php" method="post" role="form" style="display: block;">
-					<div class="form-group">
-						<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="E-Mail-Adresse" value="">
-					</div>
-					<div class="form-group">
-						<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Passwort">
-					</div>
-					<div class="form-group">
-						<div class="row">
-							<div class="col-sm-6 col-sm-offset-3">
-								<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="einloggen">
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
-				<!-- Login-Formular -->
-
-				<div id="time_countdown" class="time-count-container">
-					<div class="next-section">
-					<a class="go-to-about"><span></span></a>
-				</div><!-- /.next-section -->
-                </div>
-         	</div>
-       	</div>
-	</section>
-
-
-
-	<!-- Event Section -->
-	<section id="event" class="section-style" data-background-image="images/background/about-us.jpg">
-		<div class="pattern height-resize">
-			<div class="container">
-				<h3 class="section-name">
-					<span>
-						Login
-					</span>
-				</h3><!-- /.section-name -->
-					<h2>	</h2>
-
-				<!-- Login-Formular -->
-			<div
-				<form id="login-form" action="index.php" method="post" role="form" style="display: block;">
-					<div class="form-group">
-						<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="E-Mail-Adresse" value="">
-					</div>
-					<div class="form-group">
-						<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Passwort">
-					</div>
-					<div class="form-group">
-						<div class="row">
-							<div class="col-sm-6 col-sm-offset-3">
-								<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="einloggen">
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
-				<!-- Login-Formular -->
-				<div id="time_countdown" class="time-count-container">
-					<div class="next-section">
-					<a class="go-to-about"><span></span></a>
-
-                </div><!-- /.container -->
-		</div><!-- /.pattern -->
-
-
-	</section><!-- /#about -->
-	<!-- Event Section End -->
-
-
-
+				<!-- Event List -->
+			 	<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        Event 1</a>
+        <a class="event-date">23.12.16</a>
+        <a class="event-price">50 CHF</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
+        <p class="event-duration">Dauert 2 Stunden.</p>
+      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</p><br>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        Event 2</a>
+        <a class="event-date">23.12.16</a>
+        <a class="event-price">50 CHF</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">
+      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
+        <p class="event-duration">Dauert 2 Stunden.</p>
+      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</p><br>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        Event 3</a>
+        <a class="event-date">23.12.16</a>
+        <a class="event-price">50 CHF</a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body">
+      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
+        <p class="event-duration">Dauert 2 Stunden.</p>
+      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</p><br>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+        Event 4</a>
+        <a class="event-date">23.12.16</a>
+        <a class="event-price">50 CHF</a>
+      </h4>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse">
+      <div class="panel-body">
+      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
+        <p class="event-duration">Dauert 2 Stunden.</p>
+      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</p><br>
+      </div>
+    </div>
+  </div><div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+        Event 5</a>
+        <a class="event-date">23.12.16</a>
+        <a class="event-price">50 CHF</a>
+      </h4>
+    </div>
+    <div id="collapse5" class="panel-collapse collapse">
+      <div class="panel-body">
+      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
+        <p class="event-duration">Dauert 2 Stunden.</p>
+      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</p><br>
+      </div>
+    </div>
+  </section>
+				
 	<!-- Subscribe Section -->
 	<section id="subscribe" class="section-style" data-background-image="images/background/newsletter.jpg">
 		<div class="pattern height-resize">
