@@ -22,11 +22,10 @@
 	<!--[if lt IE 9]>
 	<script src="assets/js/html5shiv.js"></script>
 	<![endif]-->
-    
+
     <!-- jQuery -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
-
 
 </head>
 <body>
@@ -92,7 +91,7 @@
 				<div id="time_countdown" class="time-count-container">
 					<div class="next-section">
 					<a class="go-to-about"><span></span></a>
-					</div><!-- /.next-section -->
+				</div><!-- /.next-section -->
                 </div>
          	</div>
        	</div>
@@ -106,25 +105,34 @@
 			<div class="container">
 				<h3 class="section-name">
 					<span>
-						About Us
+						Login
 					</span>
 				</h3><!-- /.section-name -->
-				<h2 class="section-title">
-					We Are dedicated
-				</h2><!-- /.Section-title  -->
-				<p class="section-description">
-					Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-				</p><!-- /.section-description -->
+					<h2>	</h2>
 
-				<div class="team-container">
-                
+				<!-- Login-Formular -->
+			<div
+				<form id="login-form" action="index.php" method="post" role="form" style="display: block;">
+					<div class="form-group">
+						<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="E-Mail-Adresse" value="">
+					</div>
+					<div class="form-group">
+						<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Passwort">
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-sm-6 col-sm-offset-3">
+								<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="einloggen">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+				<!-- Login-Formular -->
+				<div id="time_countdown" class="time-count-container">
+					<div class="next-section">
+					<a class="go-to-about"><span></span></a>
 
-	<div id="wrapper">
-		
-	</div>
-                
-                
-                
                 </div><!-- /.container -->
 		</div><!-- /.pattern -->
 
@@ -207,10 +215,10 @@
 			</p>
 		</footer>
 		<!-- Footer Section End -->
-        
+
         <!-- WhatsNear Map -->
-        
-        
+
+
 
 
 		<!-- jQuery Library -->
