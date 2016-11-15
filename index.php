@@ -180,7 +180,7 @@
 			<div class="container">
 				<h3 class="section-name">
 					<span>
-						Subscribe
+						FAQ
 					</span>
 				</h3><!-- /.section-name -->
 				<h2 class="section-title">
