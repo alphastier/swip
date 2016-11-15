@@ -46,8 +46,8 @@
 		return get_result($sql);
 	}
 
-	function register($username , $password){
-    $sql = "INSERT INTO user (username, password) VALUES ('$username', '$password');";
+	function register($firstname, $lastname, $username , $password){
+    $sql = "INSERT INTO user (firstname, lastname, username, password) VALUES ('$firstname', '$lastname','$username', '$password') ;";
 		return get_result($sql);
 	}
 

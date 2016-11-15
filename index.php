@@ -18,14 +18,14 @@
   // Kontrolle, ob die Seite direkt aufgerufen wurde oder vom Login-Formular
   if(isset($_POST['login-submit'])){
     // Kontrolle mit isset, ob email und password ausgefüllt wurde
-    if(!empty($_POST['email']) && !empty($_POST['password'])){
+    if(!empty($_POST['username']) && !empty($_POST['password'])){
       
       // Werte aus POST-Array auf SQL-Injections prüfen und in Variablen schreiben
-      $email = filter_data($_POST['email']);
+      $username = filter_data($_POST['username']);
       $password = filter_data($_POST['password']);
       
       // Liefert alle Infos zu User mit diesen Logindaten
-      $result = login($email,$password);
+      $result = login($username,$password);
       
       // Anzahl der gefundenen Ergebnisse in $row_count
   		$row_count = mysqli_num_rows($result);
@@ -48,15 +48,17 @@
 
   if(isset($_POST['register-submit'])){
     // Kontrolle mit isset, ob email und password ausgefüllt wurde
-    if(!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['confirm-password'])){
+    if(!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['confirm-password']) && !empty($_POST['firstname'])&& !empty($_POST['lastname'])){
       
       // Werte aus POST-Array auf SQL-Injections prüfen und in Variablen schreiben
-      $email = filter_data($_POST['email']);
+      $username = filter_data($_POST['username']);
       $password = filter_data($_POST['password']);
       $confirm_password = filter_data($_POST['confirm-password']);
+	  $firstname = filter_data($_POST['firstname']);
+      $lastname = filter_data($_POST['lastname']);
       if($password == $confirm_password){
         // register liefert bei erfolgreichem Eintrag in die DB den Wert TRUE zurück, andernfalls FALSE
-        $result = register($email, $password);
+        $result = register($firstname, $lastname, $username, $password);
         if($result){
           $success = true;
           $success_msg = "Sie haben erfolgreich registriert.</br>
@@ -173,12 +175,13 @@
 	  				</div>
 	  		</div>
 					<hr>
-
+<?php echo $error_msg; ?>
+<?php echo $success_msg; ?>
 		<div  class="col-lg-12">
 				<!-- Login-Formular -->
 				<form id="login-form" action="index.php" method="post" role="form" style="display: block;">
 					<div class="form-group">
-						<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="User-Name" value="">
+						<input type="text" name="username" id="email" tabindex="1" class="form-control" placeholder="User-Name" value="">
 					</div>
 					<div class="form-group">
 						<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Passwort">
@@ -196,7 +199,13 @@
 				<!-- Registrations-Formular -->
 				<form id="register-form" action="index.php" method="post" role="form" style="display: none;">
 			<div class="form-group">
-				<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="User-Name" value="">
+				<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="User-Name" value="">
+			</div>
+            <div class="form-group">
+				<input type="text" name="firstname" id="firstname" tabindex="1" class="form-control" placeholder="Firstname" value="">
+			</div>
+            <div class="form-group">
+				<input type="text" name="lastname" id="lastname" tabindex="1" class="form-control" placeholder="Lastname" value="">
 			</div>
 			<div class="form-group">
 				<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Passwort">
