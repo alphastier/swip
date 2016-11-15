@@ -63,8 +63,8 @@
 		<nav class="collapse navbar-collapse">
 			<!-- Main navigation -->
 			<ul id="headernavigation" class="nav navbar-nav">
-				<li class="active"><a href="#page-top">Home</a></li>
-				<li><a href="#about">Login</a></li>
+				<li class="active"><a href="#page-top">Login</a></li>
+				<li><a href="#event">Events</a></li>
 				<li><a href="#subscribe">FAQ</a></li>
 				<li><a href="#contact"></a></li>
 			</ul> <!-- /.nav .navbar-nav -->
@@ -120,7 +120,7 @@
 
 
 	<!-- Event Section -->
-	<section id="about" class="section-style" data-background-image="images/background/about-us.jpg">
+	<section id="event" class="section-style" data-background-image="images/background/about-us.jpg">
 		<div class="pattern height-resize">
 			<div class="container">
 				<h3 class="section-name">
