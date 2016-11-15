@@ -140,13 +140,13 @@
 	</div>
 				<!-- Registrations-Formular -->
 
-				<div id="time_countdown" class="time-count-container">
-					<div class="next-section">
-					<a class="go-to-about"><span></span></a>
-				</div><!-- /.next-section -->
-                </div>
-         	</div>
-       	</div>
+					<div id="time_countdown" class="time-count-container">
+						<div class="next-section">
+						<a class="go-to-event"><span></span></a>
+						</div><!-- /.next-section -->
+        </div>
+         	</div><!-- /.container -->
+       	</div><!-- /.pattern -->
 	</section>
 
 
@@ -164,10 +164,11 @@
 
 
 				<div id="time_countdown" class="time-count-container">
-					<div class="next-section">
-					<a class="go-to-about"><span></span></a>
-
-                </div><!-- /.container -->
+						<div class="next-section">
+						<a class="go-to-faq"><span></span></a>
+						</div>
+				</div>
+			</div><!-- /.container -->
 		</div><!-- /.pattern -->
 
 
@@ -176,8 +177,8 @@
 
 
 
-	<!-- Subscribe Section -->
-	<section id="subscribe" class="section-style" data-background-image="images/background/newsletter.jpg">
+	<!-- FAQ Section -->
+	<section id="faq" class="section-style" data-background-image="images/background/newsletter.jpg">
 		<div class="pattern height-resize">
 			<div class="container">
 				<h3 class="section-name">
