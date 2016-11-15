@@ -23,10 +23,51 @@
 	<script src="assets/js/html5shiv.js"></script>
 	<![endif]-->
     
-    <!-- jQuery -->
+    <!-- WhatsNearby jQuery Plugin -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+<script src="assets/js/WhatsNearby.js" type="text/javascript" ></script>
+<script src="assets/es5-shim.min.js" type="text/javascript"></script>
+<script src="assets/es5-sham.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+			$(document).ready(function(){
+				$("#wn1").whatsnearby({ 
+					zoom:15,
+					width:"100%",
+					address: "32 Saint-Charles Ouest, Longueuil, Qc, Canada"
+				});
+				$("#wn1-1").whatsnearby({ 
+					zoom:15,
+					width:"100%"
+				});
 
+				$("#wn2").whatsnearby({ 
+					zoom:15,
+					width:"100%",
+					address: "Montreal",
+					placesRadius: 500,
+					placesTypes: [ 'restaurant', 'cafe', 'gym' ]
+				});
+
+				$("#wn3").whatsnearby({ 
+					zoom:15,
+					width:"100%",
+					address: "Montreal",
+					placesRadius: 500,
+					placesTypes: [ 'restaurant', 'cafe', 'gym' ],
+					excludePlacesTypes: ['bar']
+				});
+
+				$("#wn4").whatsnearby({ 
+					zoom:15,
+					width:"100%",
+					address: "Montreal",
+					placesRadius: 500,
+					placesTypes: [ 'restaurant', 'cafe', 'gym' ],
+					excludeByKeywords: ['Lounge']
+				});
+			});
+		</script>
 
 </head>
 <body>
@@ -120,7 +161,9 @@
                 
 
 	<div id="wrapper">
-		
+		<div class="well">
+			<div id="wn1"></div>
+		</div>
 	</div>
                 
                 
