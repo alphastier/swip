@@ -138,10 +138,12 @@
 	</div>
 				<!-- Registrations-Formular -->
 
+<!-- Next-Button auskommentiert
 					<div id="time_countdown" class="time-count-container">
 						<div class="next-section">
 						<a class="go-to-event"><span></span></a>
-						</div><!-- /.next-section -->
+						</div>
+-->
         </div>
          	</div><!-- /.container -->
        	</div><!-- /.pattern -->
@@ -161,11 +163,13 @@
 					<h2>	</h2>
 
 
+<!-- Next-Button auskommentiert
 				<div id="time_countdown" class="time-count-container">
 						<div class="next-section">
 						<a class="go-to-faq"><span></span></a>
 						</div>
 				</div>
+-->
 			</div><!-- /.container -->
 		</div><!-- /.pattern -->
 
@@ -175,34 +179,36 @@
 
 
 
-	<!-- FAQ Section -->
-	<section id="faq" class="section-style" data-background-image="images/background/newsletter.jpg">
-		<div class="pattern height-resize">
-			<div class="container">
-				<h3 class="section-name">
-					<span>
-						FAQ
-					</span>
-				</h3><!-- /.section-name -->
-				<h2 class="section-title">
-					Our Newsletter
-				</h2><!-- /.Section-title  -->
-				<p class="section-description">
-					Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-				</p><!-- /.section-description -->
+<!-- Newsletter-File-auskommentiert
 
-				<form class="news-letter" method="post">
-					<p class="alert-success"></p>
-					<p class="alert-warning"></p>
+		<section id="faq" class="section-style" data-background-image="images/background/newsletter.jpg">
+			<div class="pattern height-resize">
+				<div class="container">
+					<h3 class="section-name">
+						<span>
+							FAQ
+						</span>
+					</h3>
+					<h2 class="section-title">
+						Our Newsletter
+					</h2>
+					<p class="section-description">
+						Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+					</p>
 
-					<div class="subscribe-hide">
-						<input class="form-control" type="email" id="subscribe-email" name="subscribe-email" placeholder="Email Address"  required>
-						<button  type="submit" id="subscribe-submit" class="btn"><i class="fa fa-envelope"></i></button>
-						<span id="subscribe-loading" class="btn"> <i class="fa fa-refresh fa-spin"></i> </span>
-						<div class="subscribe-error"></div>
-					</div><!-- /.subscribe-hide -->
-					<div class="subscribe-message"></div>
-				</form><!-- /.news-letter -->
+					<form class="news-letter" method="post">
+						<p class="alert-success"></p>
+						<p class="alert-warning"></p>
+
+						<div class="subscribe-hide">
+							<input class="form-control" type="email" id="subscribe-email" name="subscribe-email" placeholder="Email Address"  required>
+							<button  type="submit" id="subscribe-submit" class="btn"><i class="fa fa-envelope"></i></button>
+							<span id="subscribe-loading" class="btn"> <i class="fa fa-refresh fa-spin"></i> </span>
+							<div class="subscribe-error"></div>
+						</div>
+						<div class="subscribe-message"></div>
+					</form>
+-->
 
 <!-- Social Media Buttons auskommentiert
 				<div class="social-btn-container">
@@ -229,9 +235,11 @@
 				</div>
 -->
 
+<!-- Next-Button auskommentiert
 					<div class="next-section">
 						<a class="go-to-contact"><span></span></a>
-					</div><!-- /.next-section -->
+					</div>
+-->
 
 				</div><!-- /.container -->
 			</div><!-- /.pattern -->
