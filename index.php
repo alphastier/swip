@@ -82,11 +82,20 @@
 				</h1><!-- /.site-title -->
 				<h3 class="section-name">
 					<span>
-						Login
 					</span>
 				</h3><!-- /.section-name -->
 				<h2 >
 				</h2><!-- /.Section-title  -->
+
+				<div class="row">
+	  				<div class="col-xs-6">
+	  					<a href="#" class="active" id="login-form-link"><h3 class="section-name">Login</3></a>
+	  				</div>
+	  				<div class="col-xs-6">
+	  					<a href="#" id="register-form-link"><h3 class="section-name">Registrieren</h3></a>
+	  				</div>
+	  		</div>
+					<hr>
 
 				<!-- Login-Formular -->
 			<div
@@ -107,6 +116,27 @@
 				</form>
 			</div>
 				<!-- Login-Formular -->
+
+				<!-- Registrations-Formular -->
+				<form id="register-form" action="index.php" method="post" role="form" style="display: none;">
+			<div class="form-group">
+				<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="E-Mail-Adresse" value="">
+			</div>
+			<div class="form-group">
+				<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Passwort">
+			</div>
+			<div class="form-group">
+				<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Passwort bestätigen">
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3">
+						<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="jetzt registrieren">
+					</div>
+				</div>
+			</div>
+		</form>
+				<!-- Registrations-Formular -->
 
 				<div id="time_countdown" class="time-count-container">
 					<div class="next-section">
@@ -125,30 +155,12 @@
 			<div class="container">
 				<h3 class="section-name">
 					<span>
-						Login
+						Events
 					</span>
 				</h3><!-- /.section-name -->
 					<h2>	</h2>
 
-				<!-- Login-Formular -->
-			<div
-				<form id="login-form" action="index.php" method="post" role="form" style="display: block;">
-					<div class="form-group">
-						<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="E-Mail-Adresse" value="">
-					</div>
-					<div class="form-group">
-						<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Passwort">
-					</div>
-					<div class="form-group">
-						<div class="row">
-							<div class="col-sm-6 col-sm-offset-3">
-								<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="einloggen">
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
-				<!-- Login-Formular -->
+
 				<div id="time_countdown" class="time-count-container">
 					<div class="next-section">
 					<a class="go-to-about"><span></span></a>
@@ -251,6 +263,28 @@
 		<script type="text/javascript" src="assets/js/functions.js"></script>
 		<!-- Custom JavaScript Functions -->
 		<script type="text/javascript" src="assets/js/jquery.ajaxchimp.min.js"></script>
+
+		<script>
+		$(function() {
+
+			$('#login-form-link').click(function(e) {
+				$("#login-form").delay(100).fadeIn(100);
+				$("#register-form").fadeOut(100);
+				$('#register-form-link').removeClass('active');
+				$(this).addClass('active');
+				e.preventDefault();
+			});
+
+			$('#register-form-link').click(function(e) {
+				$("#register-form").delay(100).fadeIn(100);
+				$("#login-form").fadeOut(100);
+				$('#login-form-link').removeClass('active');
+				$(this).addClass('active');
+				e.preventDefault();
+			});
+
+		});
+	</script>
 
 	</body>
 	</html>
