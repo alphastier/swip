@@ -206,32 +206,30 @@
 					<div class="subscribe-message"></div>
 				</form><!-- /.news-letter -->
 
+<!-- Social Media Buttons auskommentiert
 				<div class="social-btn-container">
 					<span class="social-btn-box">
 						<a href="#" class="facebook-btn">
-							<i class="fa fa-facebook"></i></a>
-						</span><!-- /.social-btn-box -->
+						<i class="fa fa-facebook"></i></a>
+					</span>
 
-						<span class="social-btn-box">
-							<a href="#" class="twitter-btn"><i class="fa fa-twitter"></i></a>
-						</span><!-- /.social-btn-box -->
+					<span class="social-btn-box">
+						<a href="#" class="twitter-btn"><i class="fa fa-twitter"></i></a>
+					</span>
 
-						<span class="social-btn-box">
-							<a href="#" class="linkedin-btn"><i class="fa fa-linkedin"></i></a>
-						</span><!-- /.social-btn-box -->
+					<span class="social-btn-box">
+						<a href="#" class="linkedin-btn"><i class="fa fa-linkedin"></i></a>
+					</span>
 
-						<span class="social-btn-box">
-							<a href="#" class="google-plus-btn"><i class="fa fa-google-plus"></i></a>
-						</span><!-- /.social-btn-box -->
+					<span class="social-btn-box">
+						<a href="#" class="google-plus-btn"><i class="fa fa-google-plus"></i></a>
+					</span>
 
-
-						<span class="social-btn-box">
-							<a href="#" class="youtube-btn"><i class="fa fa-youtube"></i></a>
-						</span><!-- /.social-btn-box -->
-
-
-
-					</div><!-- /.social-btn-container -->
+					<span class="social-btn-box">
+						<a href="#" class="youtube-btn"><i class="fa fa-youtube"></i></a>
+					</span>
+				</div>
+-->
 
 					<div class="next-section">
 						<a class="go-to-contact"><span></span></a>
