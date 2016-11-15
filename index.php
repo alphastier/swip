@@ -89,17 +89,16 @@
 
 				<div class="row">
 	  				<div class="col-xs-6">
-	  					<a href="#" class="active" id="login-form-link"><h3 class="section-name">Login</3></a>
+	  					<h3 class="section-name"><a href="#" class="active" id="login-form-link">Login</a></h3>
 	  				</div>
 	  				<div class="col-xs-6">
-	  					<a href="#" id="register-form-link"><h3 class="section-name">Registrieren</h3></a>
+	  					<h3 class="section-name"><a href="#" id="register-form-link">Registrieren</a></h3>
 	  				</div>
 	  		</div>
 					<hr>
 
 		<div  class="col-lg-12">
 				<!-- Login-Formular -->
-			<div
 				<form id="login-form" action="index.php" method="post" role="form" style="display: block;">
 					<div class="form-group">
 						<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="User-Name" value="">
@@ -115,7 +114,6 @@
 						</div>
 					</div>
 				</form>
-			</div>
 				<!-- Login-Formular -->
 
 				<!-- Registrations-Formular -->
@@ -267,7 +265,13 @@
 
 		<script>
 		$(function() {
-
+			$('#register-form-link').click(function(e) {
+				$("#register-form").delay(100).fadeIn(100);
+				$("#login-form").fadeOut(100);
+				$('#login-form-link').removeClass('active');
+				$(this).addClass('active');
+				e.preventDefault();
+			});
 			$('#login-form-link').click(function(e) {
 				$("#login-form").delay(100).fadeIn(100);
 				$("#register-form").fadeOut(100);
@@ -276,13 +280,7 @@
 				e.preventDefault();
 			});
 
-			$('#register-form-link').click(function(e) {
-				$("#register-form").delay(100).fadeIn(100);
-				$("#login-form").fadeOut(100);
-				$('#login-form-link').removeClass('active');
-				$(this).addClass('active');
-				e.preventDefault();
-			});
+
 
 		});
 	</script>
