@@ -41,13 +41,13 @@
 	/* Login
 	/* ****************************************************** */
 
-	function login($email , $password){
-		$sql = "SELECT * FROM user WHERE email = '".$email."' AND password = '".$password."';";
+	function login($username , $password){
+		$sql = "SELECT * FROM user WHERE username = '".$username."' AND password = '".$password."';";
 		return get_result($sql);
 	}
 
-	function register($email , $password){
-    $sql = "INSERT INTO user (email, password) VALUES ('$email', '$password');";
+	function register($username , $password){
+    $sql = "INSERT INTO user (username, password) VALUES ('$username', '$password');";
 		return get_result($sql);
 	}
 

@@ -7,8 +7,8 @@
 	// data.php beinhaltet alle DB-Anweisungen wie SELECT, INSERT, UPDATE, etc.
 	// Funktionen in data.php liefern das Ergebnis der Anweisungen zurück
 	// security.php enthält sicherheitsrelevante Funktionen
-	require_once("remo/system/data.php");
-	require_once("remo/system/security.php");
+	require_once("system/data.php");
+	require_once("system/security.php");
   
   // für Spätere Verwendung initialisieren wir die Variablen $error, $error_msg, $success, $success_msg
   $error = false;
@@ -73,7 +73,7 @@
       $error = true;
       $error_msg .= "Bitte füllen Sie alle Felder aus.</br>";
     }
-  }
+  } 
 ?>
 
 <!DOCTYPE html>
@@ -102,7 +102,6 @@
 	<![endif]-->
 
     <!-- jQuery -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 
 </head>

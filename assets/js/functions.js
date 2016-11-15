@@ -6,10 +6,10 @@ var  aboutImage = jQuery('#about').data('background-image');
 var  subscribeImage = jQuery('#subscribe').data('background-image');
 var  contactImage = jQuery('#contact').data('background-image');
 
-if (pageTopImage) {  jQuery('#page-top').css({ 'background-image':'url(' + pageTopImage + ')' }); };
-if (aboutImage) {  jQuery('#about').css({ 'background-image':'url(' + aboutImage + ')' }); };
-if (subscribeImage) {  jQuery('#subscribe').css({ 'background-image':'url(' + subscribeImage + ')' }); };
-if (contactImage) {  jQuery('#contact').css({ 'background-image':'url(' + contactImage + ')' }); };
+if (pageTopImage) {  jQuery('#page-top').css({ 'background-image':'url(' + pageTopImage + ')' }); }
+if (aboutImage) {  jQuery('#about').css({ 'background-image':'url(' + aboutImage + ')' }); }
+if (subscribeImage) {  jQuery('#subscribe').css({ 'background-image':'url(' + subscribeImage + ')' }); }
+if (contactImage) {  jQuery('#contact').css({ 'background-image':'url(' + contactImage + ')' }); }
 
 /* Background Images End
 -------------------------------------------------------------------*/
@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
 
     /* Window Height Resize
     -------------------------------------------------------------------*/
-    var windowheight = jQuery(window).height();
+   	var windowheight = jQuery(window).height();
     if(windowheight > 650)
     {
          $('.pattern').removeClass('height-resize');
@@ -53,36 +53,12 @@ jQuery(document).ready(function($) {
 
 
 
-	/* Time Countdown
-	-------------------------------------------------------------------*/
-	$('#time_countdown').countDown({
-
-        // targetDate: {
-        //     'day': 30,
-        //     'month': 9,
-        //     'year': 2015,
-        //     'hour': 0,
-        //     'min': 0,
-        //     'sec': 0
-        // },
-        // omitWeeks: true
-
-         targetOffset: {
-            'day':      0,
-            'month':    0,
-            'year':     1,
-            'hour':     0,
-            'min':      0,
-            'sec':      3
-		},
-		omitWeeks: true
-
-	    });
-
 
 
 	/* Next Section
 	-------------------------------------------------------------------*/
+	
+	/*
 	$('.next-section .go-to-event').click(function() {
     	$('html,body').animate({scrollTop:$('#event').offset().top}, 1000);
   	});
@@ -95,7 +71,7 @@ jQuery(document).ready(function($) {
   	$('.next-section .go-to-page-top').click(function() {
     	$('html,body').animate({scrollTop:$('#page-top').offset().top}, 1000);
   	});
-
+*/
   	/* Next Section End
 	-------------------------------------------------------------------*/
 
@@ -104,6 +80,7 @@ jQuery(document).ready(function($) {
 
        /* Subscribe
     -------------------------------------------------------------------*/
+	/*
     $(".news-letter").ajaxChimp({
         callback: mailchimpResponse,
         url: "http://jeweltheme.us10.list-manage.com/subscribe/post?u=a3e1b6603a9caac983abe3892&amp;id=257cf1a459" // Replace your mailchimp post url inside double quote "".
@@ -121,7 +98,7 @@ jQuery(document).ready(function($) {
 
 
 
-
+*/
 
 	/* Subscribe End
 	-------------------------------------------------------------------*/
@@ -131,7 +108,7 @@ jQuery(document).ready(function($) {
 
 	/* Contact
 	-------------------------------------------------------------------*/
-    $('#contact-submit').click(function () {
+  /*  $('#contact-submit').click(function () {
         $('.first-name-error, .last-name-error, .contact-email-error, .contact-subject-error, .contact-message-error').hide();
         var first_nameVal = $('input[name=first_name]').val();
         var last_nameVal = $('input[name=last_name]').val();
@@ -195,6 +172,8 @@ jQuery(document).ready(function($) {
         }) //end ajax call
         return false;
     });
+	
+	*/
 
 	/* Contact End
 	-------------------------------------------------------------------*/

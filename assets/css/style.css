@@ -1206,3 +1206,7 @@ background: #00aaff;
 .event-duration {
 	color: hsla(0,0%,0%,1.00);
 }
+
+body {
+	text: red;
+}
