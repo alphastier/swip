@@ -30,24 +30,6 @@
 </head>
 <body>
 
-
-	<!-- Preloader -->
-	<div id="preloader">
-		<div id="loader">
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="lading"></div>
-		</div>
-	</div><!-- /#preloader -->
-	<!-- Preloader End-->
-
-
 	<!-- Main Menu -->
 	<div id="main-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
 
@@ -64,10 +46,9 @@
 			<!-- Main navigation -->
 			<ul id="headernavigation" class="nav navbar-nav">
 				<li class="inactive"><a href="home.php">Events</a></li>
-                <li class="active"><a href="favoriten.php">Favoriten</a></li>
-				<li class="inactive"><a href="faq.php">FAQ</a></li>
+        <li class="active"><a href="favoriten.php">Favoriten</a></li>
 				<li class="inactive"><a href="account.php">Account</a></li>
-                <li class="inactive"><a href="index.php">Abmelden</a></li>
+        <li class="inactive"><a href="index.php">Abmelden</a></li>
 			</ul> <!-- /.nav .navbar-nav -->
 		</nav> <!-- /.navbar-collapse  -->
 	</div><!-- /#main-menu -->
@@ -193,7 +174,7 @@
       </div>
     </div>
   </section>
-				
+
 		<!-- Footer Section -->
 		<footer id="footer-section">
 			<p class="copyright">
