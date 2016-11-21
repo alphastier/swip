@@ -18,7 +18,6 @@
   $error_msg = "";
   $success = false;
   $success_msg = "";
-  
   ?>
 
 <!DOCTYPE html>

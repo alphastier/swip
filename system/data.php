@@ -62,10 +62,10 @@
 	}
 
 	/* *********************************************************
-	/* Get Event List
+	/* Get Event 
 	/* ****************************************************** */
 
-	function get_event($eventlist){
+	function get_event($event_id){
 		$sql = "SELECT * FROM events ;";
 		return get_event($sql);
 	}
