@@ -168,6 +168,29 @@
 
 </div>
 
+<div class="panel-group" id="accordion">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Event 1</a>
+				<button type="button" class="btn-default .btn-m"><span>Bearbeiten</span></button>
+					<a class="event-date">23.12.16</a>
+						<a class="event-price">50 CHF</a>
+			</h4>
+		</div>
+		<div id="collapse1" class="panel-collapse collapse in">
+			<div class="panel-body">
+			<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
+			<p class="event-duration">Dauert 2 Stunden.</p>
+			<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+			minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+			commodo consequat.</p><br>
+			</div>
+		</div>
+	</div>
+</div>
+
 
   </section>
 
