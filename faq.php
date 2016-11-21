@@ -23,13 +23,12 @@
 	<script src="assets/js/html5shiv.js"></script>
 	<![endif]-->
 
-    <!-- jQuery -->
+  <!-- jQuery -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 <script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 
 </head>
 <body>
-
 
 	<!-- Preloader -->
 	<div id="preloader">
@@ -44,31 +43,29 @@
 			<div class="dot"></div>
 			<div class="lading"></div>
 		</div>
-	</div><!-- /#preloader -->
-	<!-- Preloader End-->
-
+	</div>
 
 	<!-- Main Menu -->
 	<div id="main-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
-
 		<div class="navbar-header">
-			<!-- responsive navigation -->
+	<!-- responsive navigation -->
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 				<span class="sr-only">Toggle navigation</span>
 				<i class="fa fa-bars"></i>
-			</button> <!-- /.navbar-toggle -->
-
-		</div> <!-- /.navbar-header -->
+			</button>
+		</div>
 
 		<nav class="collapse navbar-collapse">
-			<!-- Main navigation -->
+
+	<!-- Main navigation -->
 			<ul id="headernavigation" class="nav navbar-nav">
 				<li class="active"><a href="#page-top">Login</a></li>
-				<li><a href="home.php">Events</a></li>
-				<li><a href="faq.php">FAQ</a></li>
-			</ul> <!-- /.nav .navbar-nav -->
-		</nav> <!-- /.navbar-collapse  -->
-	</div><!-- /#main-menu -->
+				<li><a href="#event">Events</a></li>
+				<li><a href="#subscribe">FAQ</a></li>
+				<li><a href="#contact"></a></li>
+			</ul>
+		</nav>
+	</div>
 	<!-- Main Menu End -->
 
 
@@ -97,7 +94,7 @@
 					<hr>
 
 		<div  class="col-lg-12">
-				<!-- Login-Formular -->
+	<!-- Login-Formular -->
 				<form id="login-form" action="index.php" method="post" role="form" style="display: block;">
 					<div class="form-group">
 						<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="User-Name" value="">
@@ -113,10 +110,10 @@
 						</div>
 					</div>
 				</form>
-				<!-- Login-Formular -->
+	<!-- Login-Formular -->
 
-				<!-- Registrations-Formular -->
-				<form id="register-form" action="index.php" method="post" role="form" style="display: none;">
+	<!-- Registrations-Formular -->
+		<form id="register-form" action="index.php" method="post" role="form" style="display: none;">
 			<div class="form-group">
 				<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="User-Name" value="">
 			</div>
@@ -135,20 +132,20 @@
 			</div>
 		</form>
 	</div>
-				<!-- Registrations-Formular -->
 
+	<!-- Registrations-Formular
 					<div id="time_countdown" class="time-count-container">
 						<div class="next-section">
 						<a class="go-to-event"><span></span></a>
-						</div><!-- /.next-section -->
-        </div>
-         	</div><!-- /.container -->
-       	</div><!-- /.pattern -->
-	</section>
+						</div>
+        	</div>
+         	</div>
+       	</div>
+	</section>  -->
 
 
 
-	<!-- Event Section -->
+	<!-- Event Section
 	<section id="event" class="section-style" data-background-image="images/background/about-us.jpg">
 		<div class="pattern height-resize">
 			<div class="container">
@@ -156,22 +153,17 @@
 					<span>
 						Events
 					</span>
-				</h3><!-- /.section-name -->
-					<h2>	</h2>
-
+				</h3>
+				<h2>	</h2>
 
 				<div id="time_countdown" class="time-count-container">
 						<div class="next-section">
 						<a class="go-to-faq"><span></span></a>
 						</div>
 				</div>
-			</div><!-- /.container -->
-		</div><!-- /.pattern -->
-
-
-	</section><!-- /#about -->
-	<!-- Event Section End -->
-
+			</div>
+		</div>
+	</section>  -->
 
 
 	<!-- FAQ Section -->
@@ -182,14 +174,21 @@
 					<span>
 						FAQ
 					</span>
-				</h3><!-- /.section-name -->
-				<h2 class="section-title">
-					Our Newsletter
-				</h2><!-- /.Section-title  -->
-				<p class="section-description">
-					Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-				</p><!-- /.section-description -->
+				</h3>
 
+	<!-- /.section-name -->
+				<h2 class="section-title">
+					Häufige Fragen
+				</h2>
+
+	<!-- /.Section-title  -->
+				<p class="section-description">
+					1. Kann ich für meinen gebuchten Event eine Rechnung erhalten?</br>
+					2. Muss ich meinen Event rückbestätigen lassen?</br>
+					3. Kann ich nach Verfügbarkeit und Preisen für Events suchen, ohne eine Buchung abzuschliessen?
+				</p>
+
+	<!-- /.section-description
 				<form class="news-letter" method="post">
 					<p class="alert-success"></p>
 					<p class="alert-warning"></p>
@@ -199,20 +198,18 @@
 						<button  type="submit" id="subscribe-submit" class="btn"><i class="fa fa-envelope"></i></button>
 						<span id="subscribe-loading" class="btn"> <i class="fa fa-refresh fa-spin"></i> </span>
 						<div class="subscribe-error"></div>
-					</div><!-- /.subscribe-hide -->
+					</div>
 					<div class="subscribe-message"></div>
-				</form><!-- /.news-letter -->
+				</form>   -->
 
+	<!-- Button Go-To -->
+				<div class="next-section">
+					<a class="go-to-contact"><span></span></a>
+				</div>
 
-					<div class="next-section">
-						<a class="go-to-contact"><span></span></a>
-					</div><!-- /.next-section -->
-
-				</div><!-- /.container -->
-			</div><!-- /.pattern -->
-
-		</section><!-- /#subscribe -->
-		<!-- Subscribe Section End -->
+			</div>
+		</div>
+	</section>
 
 		<!-- Footer Section -->
 		<footer id="footer-section">
@@ -220,12 +217,6 @@
 			By Miriam, Nora and Remo
 			</p>
 		</footer>
-		<!-- Footer Section End -->
-
-        <!-- WhatsNear Map -->
-
-
-
 
 		<!-- jQuery Library -->
 		<script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
