@@ -91,8 +91,9 @@
 		<nav class="collapse navbar-collapse">
 			<!-- Main navigation -->
 			<ul id="headernavigation" class="nav navbar-nav">
-				<li class="active"><a href="home.php">Events</a></li>
+				<li class="active"><a href="#page-top">Events</a></li>
                 <li class="inactive"><a href="favoriten.php">Favoriten</a></li>
+				<!-- <li class="inactive"><a href="subscribe">FAQ</a></li> -->
 				<li class="inactive"><a href="account.php">Account</a></li>
                 <li class="inactive"><a href="index.php">Abmelden</a></li>
 			</ul> <!-- /.nav .navbar-nav -->
@@ -116,7 +117,7 @@
 
 				<!-- Event-Create-Formular -->
 <div  class="col-lg-12">
-	<h3>Mein Event planen</h3>
+	<h3>Mein Event erstellen</h3>
 	<form id="event-form" action="account.php" method="post" role="form" style="display: block;">
 		<div class="form-group">
 			<input type="text" name="name" id="name" tabindex="1" class="form-control" placeholder="Name" value="">
@@ -147,9 +148,9 @@
 			</div>
 		</div>
 	</form>
+
 </div>
 
-<!-- Events anzeigen -->
 <div class="panel-group" id="accordion">
 	<div class="panel panel-default">
 		<div class="panel-heading">
@@ -157,7 +158,7 @@
 				<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Event 1</a>
         <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#myModal">Bearbeiten</button>
 					<a class="event-date">23.12.16</a>
-					<a class="event-price">50 CHF</a>
+						<a class="event-price">50 CHF</a>
 			</h4>
 		</div>
 		<div id="collapse1" class="panel-collapse collapse in">
@@ -174,6 +175,7 @@
 </div>
 </div>
 
+
 <!-- Event-Modalform -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -183,44 +185,53 @@
           <h4 class="modal-title" id="myModalLabel">Dieser Event</h4>
         </div>
         <div class="modal-body">
+
           <div class="form-group row">
-            <label for="Gender" class="col-sm-2 form-control-label">Anrede</label>
-            <div class="col-sm-5">
-              <select class="form-control form-control-sm account-border" id="Gender" name="gender">
-                <option  value="">--</option>
-                <option  value="Frau">Frau</option>
-                <option  value="Herr">Herr</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="Vorname" class="col-sm-2 col-xs-12 form-control-label">Name</label>
+            <label for="Name" class="col-sm-2 col-xs-12 form-control-label">Name</label>
             <div class="col-sm-5 col-xs-6">
               <input  type="text" class="form-control form-control-sm account-border"
-                      id="Vorname" placeholder="Vorname"
-                      name="firstname" value=" ">
+                      id="name" placeholder="Name"
+                      name="name" value=" ">
             </div>
           </div>
           <div class="form-group row">
-            <label for="Email" class="col-sm-2 form-control-label">E-Mail</label>
+            <label for="Beschreibung" class="col-sm-2 form-control-label">Beschreibung</label>
             <div class="col-sm-10">
-              <input  type="email" class="form-control form-control-sm account-border"
-                      id="Email" placeholder="E-Mail"
-                      name="email" value=" ">
+              <input  type="text" class="form-control form-control-sm account-border"
+                      id="text" placeholder="Beschreibung"
+                      name="text" value=" ">
             </div>
           </div>
           <div class="form-group row">
-            <label for="Passwort" class="col-sm-2 form-control-label">Password</label>
+            <label for="Ort" class="col-sm-2 form-control-label">Ort</label>
             <div class="col-sm-10">
-              <input type="password" class="form-control form-control-sm account-border" id="Passwort" placeholder="Passwort" name="password">
+              <input type="text" class="form-control form-control-sm account-border" id="place" placeholder="Ort" name="place">
             </div>
           </div>
           <div class="form-group row">
-            <label for="Passwort_Conf" class="col-sm-2 form-control-label">Passwort bestätigen</label>
+            <label for="Startzeit" class="col-sm-2 form-control-label">Startzeit</label>
             <div class="col-sm-10">
-              <input type="password" class="form-control form-control-sm account-border" id="Passwort_Conf" placeholder="Passwort" name="confirm-password">
+              <input type="time" class="form-control form-control-sm account-border" id="starttime" placeholder="Startzeit" name="starttime">
             </div>
           </div>
+					<div class="form-group row">
+						<label for="Datum" class="col-sm-2 form-control-label">Datum</label>
+						<div class="col-sm-10">
+							<input type="date" class="form-control form-control-sm account-border" id="date" placeholder="Datum" name="date">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="Preis" class="col-sm-2 form-control-label">Preis</label>
+						<div class="col-sm-10">
+							<input type="number" class="form-control form-control-sm account-border" id="price" placeholder="Preis" name="price">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="Dauer" class="col-sm-2 form-control-label">Dauer</label>
+						<div class="col-sm-10">
+							<input type="number" class="form-control form-control-sm account-border" id="duration" placeholder="Dauer" name="duration">
+						</div>
+					</div>
         </div>
 
         <div class="modal-footer">
