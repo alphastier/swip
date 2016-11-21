@@ -83,115 +83,47 @@
 				</h1><!-- /.site-title -->
 				<h3 class="section-name">
 					<span>
-						Events
+						Mein Konto
 					</span>
 				</h3><!-- /.section-name -->
 
-				<!-- Event List -->
-			 	<div class="panel-group" id="accordion">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-        Event 1</a>
-        <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date">23.12.16</a>
-        <a class="event-price">50 CHF</a>
-      </h4>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse in">
-      <div class="panel-body">
-      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
-        <p class="event-duration">Dauert 2 Stunden.</p>
-      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p><br>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-        Event 2</a>
-        <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date">23.12.16</a>
-        <a class="event-price">50 CHF</a>
-      </h4>
-    </div>
-    <div id="collapse2" class="panel-collapse collapse">
-      <div class="panel-body">
-      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
-        <p class="event-duration">Dauert 2 Stunden.</p>
-      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p><br>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-        Event 3</a>
-        <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date">23.12.16</a>
-        <a class="event-price">50 CHF</a>
-      </h4>
-    </div>
-    <div id="collapse3" class="panel-collapse collapse">
-      <div class="panel-body">
-      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
-        <p class="event-duration">Dauert 2 Stunden.</p>
-      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p><br>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-        Event 4</a>
-        <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date">23.12.16</a>
-        <a class="event-price">50 CHF</a>
-      </h4>
-    </div>
-    <div id="collapse4" class="panel-collapse collapse">
-      <div class="panel-body">
-      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
-        <p class="event-duration">Dauert 2 Stunden.</p>
-      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p><br>
-      </div>
-    </div>
-  </div><div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
-        Event 5</a>
-        <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date">23.12.16</a>
-        <a class="event-price">50 CHF</a>
-      </h4>
-    </div>
-    <div id="collapse5" class="panel-collapse collapse">
-      <div class="panel-body">
-      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
-        <p class="event-duration">Dauert 2 Stunden.</p>
-      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p><br>
-      </div>
-    </div>
+				<!-- Event-Create-Formular -->
+<div  class="col-lg-12">
+	<h3>Mein Event planen</h3>
+	<form id="event-form" action="account.php" method="post" role="form" style="display: block;">
+		<div class="form-group">
+			<input type="text" name="name" id="name" tabindex="1" class="form-control" placeholder="Name" value="">
+		</div>
+		<div class="form-group">
+			<input type="text" name="text" id="text" tabindex="2" class="form-control" placeholder="Beschreibung">
+		</div>
+		<div class="form-group">
+			<input type="text" name="place" id="place" tabindex="3" class="form-control" placeholder="Ort">
+		</div>
+		<div class="form-group">
+			<input type="time" name="starttime" id="starttime" tabindex="4" class="form-control" placeholder="Startzeit">
+		</div>
+		<div class="form-group">
+			<input type="date" name="date" id="date" tabindex="5" class="form-control" placeholder="Datum">
+		</div>
+		<div class="form-group">
+			<input type="number" name="price" id="price" tabindex="6" class="form-control" placeholder="Preis in Franken">
+		</div>
+		<div class="form-group">
+			<input type="number" name="duration" id="duration" tabindex="7" class="form-control" placeholder="Dauer in Stunden">
+		</div>
+		<div class="form-group">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<input type="submit" name="login-submit" id="login-submit" tabindex="8" class="form-control btn btn-login" value="Speichern">
+				</div>
+			</div>
+		</div>
+	</form>
+
+</div>
+
+
   </section>
 
 		<!-- Footer Section -->
