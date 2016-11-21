@@ -18,7 +18,9 @@
   $error_msg = "";
   $success = false;
   $success_msg = "";
-  
+
+  $eventlist = get_event($event_id);
+
   ?>
 
 <!DOCTYPE html>
@@ -90,6 +92,8 @@
 						Events
 					</span>
 				</h3><!-- /.section-name -->
+
+				<?php   while($post = mysqli_fetch_assoc($eventlist)) { ?>
 
 				<!-- Event List -->
 			 	<div class="panel-group" id="accordion">
