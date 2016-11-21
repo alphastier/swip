@@ -91,7 +91,7 @@
 		<nav class="collapse navbar-collapse">
 			<!-- Main navigation -->
 			<ul id="headernavigation" class="nav navbar-nav">
-				<li class="active"><a href="#page-top">Events</a></li>
+				<li class="active"><a href="home.php">Events</a></li>
                 <li class="inactive"><a href="favoriten.php">Favoriten</a></li>
 				<!-- <li class="inactive"><a href="subscribe">FAQ</a></li> -->
 				<li class="inactive"><a href="account.php">Account</a></li>
@@ -235,6 +235,7 @@
         </div>
 
         <div class="modal-footer">
+					<input type="submit" class="btn btn-default" value="Event löschen" />
           <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Abbrechen</button>
           <button type="submit" class="btn btn-success btn-sm" name="update-submit">Änderungen speichern</button>
         </div>
