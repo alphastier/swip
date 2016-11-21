@@ -18,23 +18,23 @@
 
   // Event erstellen
   if(isset($_POST['event_create'])){
-    // Kontrolle mit isset, ob email und password ausgefüllt wurde
-    if(!empty($_POST['name']) && !empty($_POST['text']) && !empty($_POST['place']) && !empty($_POST['starttime'])&& !empty($_POST['date'])&& !empty($_POST['price'])&& !empty($_POST['duration'])&& !empty($_POST['datetime'])){
+  // Kontrolle mit isset, ob email und password ausgefüllt wurde
+  if(!empty($_POST['name']) && !empty($_POST['text']) && !empty($_POST['place']) && !empty($_POST['starttime'])&& !empty($_POST['date'])&& !empty($_POST['price'])&& !empty($_POST['duration'])&& !empty($_POST['datetime'])){
 
       // Werte aus POST-Array auf SQL-Injections prüfen und in Variablen schreiben
       $name = filter_data($_POST['name']);
       $text = filter_data($_POST['text']);
       $place = filter_data($_POST['place']);
-	  $starttime = filter_data($_POST['starttime']);
+	    $starttime = filter_data($_POST['starttime']);
       $date = filter_data($_POST['date']);
-	  $price = filter_data($_POST['price']);
-	  $duration = filter_data($_POST['duration']);
+	    $price = filter_data($_POST['price']);
+	    $duration = filter_data($_POST['duration']);
       $datetime = filter_data($_POST['datetime']);
 
-        $result = event_create($name, $text, $place, $starttime, $date, $price, $duration, $datetime);
+      $result = event_create($name, $text, $place, $starttime, $date, $price, $duration, $datetime);
         if($result){
-          $success = true;
-          $success_msg = "Event wurde erfolgreich erstellt</br>";
+        $success = true;
+        $success_msg = "Event wurde erfolgreich erstellt</br>";
         }
     }else{
       $error = true;
@@ -267,5 +267,5 @@
 		<script type="text/javascript" src="assets/js/jquery.ajaxchimp.min.js"></script>
 
 
-	</body>
-	</html>
+</body>
+</html>
