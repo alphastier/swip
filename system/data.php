@@ -65,9 +65,9 @@
 	/* Get Event 
 	/* ****************************************************** */
 
-	function get_event($event_id){
+	function get_all_events(){
 		$sql = "SELECT * FROM events ;";
-		return get_event($sql);
+		return get_result($sql);
 	}
 
 	/* *********************************************************

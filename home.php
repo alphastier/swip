@@ -18,6 +18,8 @@
   $error_msg = "";
   $success = false;
   $success_msg = "";
+  
+  $eventlist = get_all_events();
   ?>
 
 <!DOCTYPE html>
@@ -90,32 +92,37 @@
 					</span>
 				</h3><!-- /.section-name -->
 
+				<?php while($event = mysqli_fetch_assoc($eventlist)) { ?>
+
 				<!-- Event List -->
 			 	<div class="panel-group" id="accordion">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" name="name" value="<?php echo $eventlist['name']; ?>">Event 1</a>
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" name="name" value="<?php echo $event['name']; ?>"></a>
         <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date" name="date" value="<?php echo $eventlist['date']; ?>">23.12.16</a>
-        <a class="event-price" name="price" value="<?php echo $eventlist['price']; ?>">50 CHF</a>
+        <a class="event-date" name="date" value="<?php echo $event['date']; ?>"></a>
+        <a class="event-price" name="price" value="<?php echo $event['price']; ?>"></a>
       </h4>
     </div>
     <div id="collapse1" class="panel-collapse collapse in">
       <div class="panel-body">
-      	<p class="event-starttime" name="starttime" value="<?php echo $eventlist['starttime']; ?>">Beginnt um 18:30 Uhr.</p>
-        <p class="event-duration" name="duration" value="<?php echo $eventlist['duration']; ?>">Dauert 2 Stunden.</p>
-      	<p class="event-place" name="place" value="<?php echo $eventlist['place']; ?>">Interlaken</p>
-        <p class="event-font" name="text" value="<?php echo $eventlist['text']; ?>">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p><br>
+      	<p class="event-starttime" name="starttime" value="<?php echo $event['starttime']; ?>"></p>
+        <p class="event-duration" name="duration" value="<?php echo $event['duration']; ?>"></p>
+      	<p class="event-place" name="place" value="<?php echo $event['place']; ?>"></p>
+        <p class="event-font" name="text" value="<?php echo $event['text']; ?>"></p><br>
       </div>
     </div>
   </div>
+</div>
 
+<?php } ?>
+
+</div>
     </div>
   </section>
+  
+  
 
 		<!-- Footer Section -->
 		<footer id="footer-section">
@@ -126,9 +133,6 @@
 		<!-- Footer Section End -->
 
         <!-- WhatsNear Map -->
-
-
-
 
 		<!-- jQuery Library -->
 		<script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
