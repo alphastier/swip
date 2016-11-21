@@ -70,7 +70,7 @@
                 <li class="inactive"><a href="index.php">Abmelden</a></li>
 			</ul> <!-- /.nav .navbar-nav -->
 		</nav> <!-- /.navbar-collapse  -->
-	</div><!-- /#main-menu -->
+	</div><!-- /main-menu -->
 	<!-- Main Menu End -->
 
 
