@@ -30,7 +30,7 @@
 	function get_result($sql)
 	{
 		$db = get_db_connection();
-    // echo $sql ."<br>";
+     echo $sql ."<br>";
 		$result = mysqli_query($db, $sql);
 		mysqli_close($db);
 		return $result;
@@ -60,7 +60,22 @@
 	    $sql = "INSERT INTO events (user_id, name, text, place, starttime, date, price, duration) VALUES ('$user_id', '$name', '$text','$place', '$starttime', '$date', '$price', '$duration');";
 		return get_result($sql);
 	}
-	
+
+
+	/* *********************************************************
+	/* Event-bearbeiten
+
+	/* ****************************************************** */
+	function get_events_by_user($user_id){
+	$sql = "SELECT * FROM events WHERE user_id = $user_id;";
+	return get_result($sql);
+}
+
+function get_event($event_id){
+$sql = "SELECT * FROM events WHERE event_id = $event_id;";
+return get_result($sql);
+}
+
 	/* *********************************************************
 	/* Home
 	/* ****************************************************** */

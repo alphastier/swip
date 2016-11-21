@@ -5,7 +5,7 @@
 	}else{
   	$user_id = $_SESSION['user_id'];
 	}
-
+	// echo $user_id;
 	// externe Dateien Laden
 	// data.php beinhaltet alle DB-Anweisungen wie SELECT, INSERT, UPDATE, etc.
 	// Funktionen in data.php liefern das Ergebnis der Anweisungen zurück
@@ -18,7 +18,7 @@
   $error_msg = "";
   $success = false;
   $success_msg = "";
-  
+
   // Event erstellen
   if(isset($_POST['event_create'])){
 
@@ -34,7 +34,7 @@
       $date = filter_data($_POST['date']);
 	  $price = filter_data($_POST['price']);
 	  $duration = filter_data($_POST['duration']);
-	  
+
       $result = event_create($user_id, $name, $text, $place, $starttime, $date, $price, $duration);
         if($result){
         $success = true;
@@ -45,6 +45,10 @@
       $error_msg .= "Bitte füllen Sie alle Felder aus.</br>";
     }
   }
+
+  $eventlist = get_events_by_user($user_id);
+  //echo count($eventlist);
+
 ?>
 
 <!DOCTYPE html>
@@ -123,7 +127,7 @@
 <div  class="col-lg-12">
 	<h3>Mein Event erstellen</h3>
 	<form id="event-form" method="post" role="form" style="display: block;" action="<?PHP echo $_SERVER['PHP_SELF'] ?>">
-    
+
 		<div class="form-group">
 			<input type="text" name="name" id="name" tabindex="1" class="form-control" placeholder="Name">
 		</div>
@@ -134,10 +138,10 @@
 			<input type="text" name="place" id="place" tabindex="3" class="form-control" placeholder="Ort">
 		</div>
 		<div class="form-group">
-			<input type="time" name="starttime" id="starttime" tabindex="4" class="form-control" placeholder="Startzeit">
+			<input type="time" name="starttime" id="starttime" tabindex="4" class="form-control" placeholder="HH.MM.SS.">
 		</div>
 		<div class="form-group">
-			<input type="date" name="date" id="date" tabindex="5" class="form-control" placeholder="Datum">
+			<input type="date" name="date" id="date" tabindex="5" class="form-control" placeholder="YYYY.MM.DD.">
 		</div>
 		<div class="form-group">
 			<input type="number" name="price" id="price" tabindex="6" class="form-control" placeholder="Preis in Franken">
@@ -155,34 +159,34 @@
 	</form>
 
 </div>
+<?php
+while($event = mysqli_fetch_assoc($eventlist)){
 
+ ?>
 <div class="panel-group" id="accordion">
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<h4 class="panel-title">
-				<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Event 1</a>
-        <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#myModal">Bearbeiten</button>
-					<a class="event-date">23.12.16</a>
-						<a class="event-price">50 CHF</a>
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><?php echo $event['name']; ?></a>
+        <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#event<?php echo $event['event_id']; ?>">Bearbeiten</button>
+					<a class="event-date"><?php echo $event['date']; ?></a>
+						<a class="event-price"><?php echo $event['price']; ?> CHF</a>
 			</h4>
 		</div>
 		<div id="collapse1" class="panel-collapse collapse in">
 			<div class="panel-body">
-			<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
-			<p class="event-duration">Dauert 2 Stunden.</p>
-			<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-			minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-			commodo consequat.</p><br>
+			<p class="event-starttime">Beginnt um <?php echo $event['starttime']; ?> Uhr.</p>
+			<p class="event-duration">Dauert <?php echo $event['duration']; ?> Stunden.</p>
+			<p class="event-place"> <?php echo $event['place']; ?></p><p class="event-font"><?php echo $event['text']; ?></p><br>
 			</div>
 		</div>
 	</div>
 </div>
-</div>
+
 
 
 <!-- Event-Modalform -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="event<?php echo $event['event_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <form enctype="multipart/form-data" action="<?PHP echo $_SERVER['PHP_SELF'] ?>" method="post">
@@ -196,7 +200,7 @@
             <div class="col-sm-5 col-xs-6">
               <input  type="text" class="form-control form-control-sm account-border"
                       id="name" placeholder="Name"
-                      name="name" value=" ">
+                      name="name" value="<?php echo $event['name']; ?>">
             </div>
           </div>
           <div class="form-group row">
@@ -204,37 +208,37 @@
             <div class="col-sm-10">
               <input  type="text" class="form-control form-control-sm account-border"
                       id="text" placeholder="Beschreibung"
-                      name="text" value=" ">
+                      name="text" value="<?php echo $event['text']; ?>">
             </div>
           </div>
           <div class="form-group row">
             <label for="Ort" class="col-sm-2 form-control-label">Ort</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control form-control-sm account-border" id="place" placeholder="Ort" name="place">
+              <input type="text" class="form-control form-control-sm account-border" id="place" placeholder="Ort" name="place" value="<?php echo $event['place']; ?>">
             </div>
           </div>
           <div class="form-group row">
             <label for="Startzeit" class="col-sm-2 form-control-label">Startzeit</label>
             <div class="col-sm-10">
-              <input type="time" class="form-control form-control-sm account-border" id="starttime" placeholder="Startzeit" name="starttime">
+              <input type="time" class="form-control form-control-sm account-border" id="starttime" placeholder="HH.MM.SS." name="starttime" value="<?php echo $event['starttime']; ?>">
             </div>
           </div>
 					<div class="form-group row">
 						<label for="Datum" class="col-sm-2 form-control-label">Datum</label>
 						<div class="col-sm-10">
-							<input type="date" class="form-control form-control-sm account-border" id="date" placeholder="Datum" name="date">
+							<input type="date" class="form-control form-control-sm account-border" id="date" placeholder="YYYY.MM.DD." name="date" value="<?php echo $event['date']; ?>">
 						</div>
 					</div>
 					<div class="form-group row">
 						<label for="Preis" class="col-sm-2 form-control-label">Preis</label>
 						<div class="col-sm-10">
-							<input type="number" class="form-control form-control-sm account-border" id="price" placeholder="Preis" name="price">
+							<input type="number" class="form-control form-control-sm account-border" id="price" placeholder="Preis" name="price" value="<?php echo $event['price']; ?>">
 						</div>
 					</div>
 					<div class="form-group row">
 						<label for="Dauer" class="col-sm-2 form-control-label">Dauer</label>
 						<div class="col-sm-10">
-							<input type="number" class="form-control form-control-sm account-border" id="duration" placeholder="Dauer" name="duration">
+							<input type="number" class="form-control form-control-sm account-border" id="duration" placeholder="Dauer" name="duration" value="<?php echo $event['duration']; ?>">
 						</div>
 					</div>
         </div>
@@ -249,6 +253,8 @@
     </div>
   </div>
 </div>
+<?php }
+?>
 
   </section>
 
