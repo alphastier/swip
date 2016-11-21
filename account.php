@@ -41,6 +41,7 @@
       $error = true;
       $error_msg .= "Bitte füllen Sie alle Felder aus.</br>";
     }
+  }
 ?>
 
 <!DOCTYPE html>
@@ -74,23 +75,6 @@
 
 </head>
 <body>
-
-
-	<!-- Preloader -->
-	<div id="preloader">
-		<div id="loader">
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="lading"></div>
-		</div>
-	</div><!-- /#preloader -->
-	<!-- Preloader End-->
 
 
 	<!-- Main Menu -->
@@ -190,6 +174,7 @@
 		</div>
 	</div>
 </div>
+</div>
 
 
 <!-- Event-Modalform -->
@@ -218,7 +203,7 @@
                       id="Vorname" placeholder="Vorname"
                       name="firstname" value=" ">
             </div>
-            <div class="col-sm-5 col-xs-6">
+            <div class="form-group row">
               <input  type="text" class="form-control form-control-sm"
                       id="Nachname" placeholder="Nachname"
                       name="lastname" value=" ">
