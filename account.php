@@ -149,9 +149,9 @@
 			</div>
 		</div>
 	</form>
-
 </div>
 
+<!-- Events anzeigen -->
 <div class="panel-group" id="accordion">
 	<div class="panel panel-default">
 		<div class="panel-heading">
@@ -159,7 +159,7 @@
 				<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Event 1</a>
         <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#myModal">Bearbeiten</button>
 					<a class="event-date">23.12.16</a>
-						<a class="event-price">50 CHF</a>
+					<a class="event-price">50 CHF</a>
 			</h4>
 		</div>
 		<div id="collapse1" class="panel-collapse collapse in">
@@ -175,7 +175,6 @@
 	</div>
 </div>
 </div>
-
 
 <!-- Event-Modalform -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
