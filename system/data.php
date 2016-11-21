@@ -56,8 +56,8 @@
 	/* Event create
 	/* ****************************************************** */
 
-	function event_create($userid, $name, $text, $place , $starttime, $date, $price, $duration, $datetime){
-    $sql = "INSERT INTO events (name, text, place, starttime, date, price, duration, datettime) VALUES ('$name', '$text','$place', '$starttime', '$date', '$price', '$duration', '$datetime') ;";
+	function event_create($user_id, $name, $text, $place , $starttime, $date, $price, $duration){
+	    $sql = "INSERT INTO events (user_id, name, text, place, starttime, date, price, duration) VALUES ('$user_id', '$name', '$text','$place', '$starttime', '$date', '$price', '$duration');";
 		return get_result($sql);
 	}
 	

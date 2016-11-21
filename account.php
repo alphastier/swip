@@ -1,7 +1,10 @@
 <?php
   session_start();
-	if(isset($_SESSION['id'])) unset($_SESSION['id']);
-	session_destroy();
+	if(!isset($_SESSION['user_id'])){
+		header("Location:index.php");
+	}else{
+  	$user_id = $_SESSION['user_id'];
+	}
 
 	// externe Dateien Laden
 	// data.php beinhaltet alle DB-Anweisungen wie SELECT, INSERT, UPDATE, etc.
@@ -15,23 +18,24 @@
   $error_msg = "";
   $success = false;
   $success_msg = "";
-
+  
   // Event erstellen
   if(isset($_POST['event_create'])){
+	  
     // Kontrolle mit isset, ob email und password ausgefüllt wurde
-    if(!empty($_POST['name']) && !empty($_POST['text']) && !empty($_POST['place']) && !empty($_POST['starttime'])&& !empty($_POST['date'])&& !empty($_POST['price'])&& !empty($_POST['duration'])&& !empty($_POST['datetime'])){
+    if(!empty($_POST['name']) && !empty($_POST['text']) && !empty($_POST['place']) && !empty($_POST['starttime'])&& !empty($_POST['date'])&& !empty($_POST['price'])&& !empty($_POST['duration'])){
 
       // Werte aus POST-Array auf SQL-Injections prüfen und in Variablen schreiben
-      $name = filter_data($_POST['name']);
+      $user_id = $_SESSION['user_id'];
+	  $name = filter_data($_POST['name']);
       $text = filter_data($_POST['text']);
       $place = filter_data($_POST['place']);
 	  $starttime = filter_data($_POST['starttime']);
       $date = filter_data($_POST['date']);
 	  $price = filter_data($_POST['price']);
 	  $duration = filter_data($_POST['duration']);
-      $datetime = filter_data($_POST['datetime']);
-
-        $result = event_create($name, $text, $place, $starttime, $date, $price, $duration, $datetime);
+	  
+        $result = event_create($user_id, $name, $text, $place, $starttime, $date, $price, $duration);
         if($result){
           $success = true;
           $success_msg = "Event wurde erfolgreich erstellt</br>";
@@ -118,9 +122,10 @@
 				<!-- Event-Create-Formular -->
 <div  class="col-lg-12">
 	<h3>Mein Event erstellen</h3>
-	<form id="event-form" action="account.php" method="post" role="form" style="display: block;">
+	<form id="event-form" method="post" role="form" style="display: block;" action="<?PHP echo $_SERVER['PHP_SELF'] ?>">
+    
 		<div class="form-group">
-			<input type="text" name="name" id="name" tabindex="1" class="form-control" placeholder="Name" value="">
+			<input type="text" name="name" id="name" tabindex="1" class="form-control" placeholder="Name">
 		</div>
 		<div class="form-group">
 			<input type="text" name="text" id="text" tabindex="2" class="form-control" placeholder="Beschreibung">
@@ -143,7 +148,7 @@
 		<div class="form-group">
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-3">
-					<input type="submit" name="login-submit" id="event_create" tabindex="8" class="form-control btn btn-login" value="Speichern">
+					<input type="submit" name="event_create" id="event_create" tabindex="8" class="form-control btn btn-login" value="Speichern">
 				</div>
 			</div>
 		</div>

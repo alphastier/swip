@@ -1,6 +1,6 @@
 <?php
   session_start();
-	if(isset($_SESSION['id'])) unset($_SESSION['id']);
+	if(isset($_SESSION['user_id'])) unset($_SESSION['user_id']);
 	session_destroy();
 
 	// externe Dateien Laden
@@ -32,7 +32,7 @@
       if( $row_count == 1){
         session_start();
         $user = mysqli_fetch_assoc($result);
-        $_SESSION['userid'] = $user['user_id'];
+        $_SESSION['user_id'] = $user['user_id'];
         header("Location:home.php");
       }else{
         // Fehlermeldungen werden erst später angezeigt

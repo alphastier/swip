@@ -309,19 +309,19 @@ a:focus{
 /* 2.3 - Placeholder color
 ------------------------------------------ */
 .form-control::-webkit-input-placeholder {
-   color: #ffffff;
+   color: #000;
 }
 
 .form-control:-moz-placeholder {
-   color: #ffffff;
+   color: #000;
 }
 
 .form-control::-moz-placeholder {
-   color: #ffffff;
+   color: #000;
 }
 
 .form-control:-ms-input-placeholder{
-	color:#ffffff;
+	color:#000;
 }
 /* 2.3 - Placeholder color End
 ------------------------------------------ */
