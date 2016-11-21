@@ -21,7 +21,7 @@
   
   // Event erstellen
   if(isset($_POST['event_create'])){
-	  
+
     // Kontrolle mit isset, ob email und password ausgefüllt wurde
     if(!empty($_POST['name']) && !empty($_POST['text']) && !empty($_POST['place']) && !empty($_POST['starttime'])&& !empty($_POST['date'])&& !empty($_POST['price'])&& !empty($_POST['duration'])){
 
@@ -35,10 +35,10 @@
 	  $price = filter_data($_POST['price']);
 	  $duration = filter_data($_POST['duration']);
 	  
-        $result = event_create($user_id, $name, $text, $place, $starttime, $date, $price, $duration);
+      $result = event_create($user_id, $name, $text, $place, $starttime, $date, $price, $duration);
         if($result){
-          $success = true;
-          $success_msg = "Event wurde erfolgreich erstellt</br>";
+        $success = true;
+        $success_msg = "Event wurde erfolgreich erstellt</br>";
         }
     }else{
       $error = true;
@@ -272,5 +272,5 @@
 		<script type="text/javascript" src="assets/js/jquery.ajaxchimp.min.js"></script>
 
 
-	</body>
-	</html>
+</body>
+</html>
