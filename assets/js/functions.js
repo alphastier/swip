@@ -37,7 +37,7 @@ jQuery(document).ready(function($) {
 
 	/* Main Menu
 	-------------------------------------------------------------------*/
-	$('#main-menu #headernavigation').onePageNav({
+	/*$('#main-menu #headernavigation').onePageNav({
 		currentClass: 'active',
 		changeHash: false,
 		scrollSpeed: 750,
@@ -45,7 +45,7 @@ jQuery(document).ready(function($) {
 		scrollOffset: 0,
 		filter: '',
 		easing: 'swing'
-	});
+	});*/
 
 	/* Main Menu End
 	-------------------------------------------------------------------*/

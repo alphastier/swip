@@ -143,9 +143,8 @@
 			<!-- Main navigation -->
 			<ul id="headernavigation" class="nav navbar-nav">
 				<li class="active"><a href="#page-top">Login</a></li>
-				<li><a href="#event">Events</a></li>
-				<li><a href="#subscribe">FAQ</a></li>
-				<li><a href="#contact"></a></li>
+				<li><a href="index.php">Events</a></li>
+				<li><a href="faq.php">FAQ</a></li>
 			</ul> <!-- /.nav .navbar-nav -->
 		</nav> <!-- /.navbar-collapse  -->
 	</div><!-- /#main-menu -->
