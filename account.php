@@ -34,8 +34,7 @@
         $result = event_create($name, $text, $place, $starttime, $date, $price, $duration, $datetime);
         if($result){
           $success = true;
-          $success_msg = "Sie haben erfolgreich registriert.</br>
-          Bitte loggen Sie sich jetzt ein.</br>";
+          $success_msg = "Event wurde erfolgreich erstellt</br>";
         }
     }else{
       $error = true;
