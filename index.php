@@ -2,14 +2,14 @@
   session_start();
 	if(isset($_SESSION['id'])) unset($_SESSION['id']);
 	session_destroy();
-	
+
 	// externe Dateien Laden
 	// data.php beinhaltet alle DB-Anweisungen wie SELECT, INSERT, UPDATE, etc.
 	// Funktionen in data.php liefern das Ergebnis der Anweisungen zurück
 	// security.php enthält sicherheitsrelevante Funktionen
 	require_once("system/data.php");
 	require_once("system/security.php");
-  
+
   // für Spätere Verwendung initialisieren wir die Variablen $error, $error_msg, $success, $success_msg
   $error = false;
   $error_msg = "";
@@ -19,14 +19,14 @@
   if(isset($_POST['login-submit'])){
     // Kontrolle mit isset, ob email und password ausgefüllt wurde
     if(!empty($_POST['username']) && !empty($_POST['password'])){
-      
+
       // Werte aus POST-Array auf SQL-Injections prüfen und in Variablen schreiben
       $username = filter_data($_POST['username']);
       $password = filter_data($_POST['password']);
-      
+
       // Liefert alle Infos zu User mit diesen Logindaten
       $result = login($username,$password);
-      
+
       // Anzahl der gefundenen Ergebnisse in $row_count
   		$row_count = mysqli_num_rows($result);
       if( $row_count == 1){
@@ -49,12 +49,12 @@
   if(isset($_POST['register-submit'])){
     // Kontrolle mit isset, ob email und password ausgefüllt wurde
     if(!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['confirm-password']) && !empty($_POST['firstname'])&& !empty($_POST['lastname'])){
-      
+
       // Werte aus POST-Array auf SQL-Injections prüfen und in Variablen schreiben
       $username = filter_data($_POST['username']);
       $password = filter_data($_POST['password']);
       $confirm_password = filter_data($_POST['confirm-password']);
-	  $firstname = filter_data($_POST['firstname']);
+	    $firstname = filter_data($_POST['firstname']);
       $lastname = filter_data($_POST['lastname']);
       if($password == $confirm_password){
         // register liefert bei erfolgreichem Eintrag in die DB den Wert TRUE zurück, andernfalls FALSE
@@ -75,7 +75,7 @@
       $error = true;
       $error_msg .= "Bitte füllen Sie alle Felder aus.</br>";
     }
-  } 
+  }
 ?>
 
 <!DOCTYPE html>
@@ -144,7 +144,6 @@
 			<ul id="headernavigation" class="nav navbar-nav">
 				<li class="active"><a href="#page-top">Login</a></li>
 				<li><a href="index.php">Events</a></li>
-				<li><a href="faq.php">FAQ</a></li>
 			</ul> <!-- /.nav .navbar-nav -->
 		</nav> <!-- /.navbar-collapse  -->
 	</div><!-- /#main-menu -->
@@ -339,9 +338,6 @@
 			</p>
 		</footer>
 		<!-- Footer Section End -->
-
-        <!-- WhatsNear Map -->
-
 
 
 
