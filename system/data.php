@@ -60,7 +60,16 @@
 	    $sql = "INSERT INTO events (user_id, name, text, place, starttime, date, price, duration) VALUES ('$user_id', '$name', '$text','$place', '$starttime', '$date', '$price', '$duration');";
 		return get_result($sql);
 	}
-	
+
+	/* *********************************************************
+	/* Get Event List
+	/* ****************************************************** */
+
+	function get_event($event_id){
+		$sql = "SELECT * FROM events ;";
+		return get_event($sql);
+	}
+
 	/* *********************************************************
 	/* Home
 	/* ****************************************************** */
