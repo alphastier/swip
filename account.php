@@ -143,7 +143,7 @@
 		<div class="form-group">
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-3">
-					<input type="submit" name="login-submit" id="login-submit" tabindex="8" class="form-control btn btn-login" value="Speichern">
+					<input type="submit" name="login-submit" id="event_create" tabindex="8" class="form-control btn btn-login" value="Speichern">
 				</div>
 			</div>
 		</div>
