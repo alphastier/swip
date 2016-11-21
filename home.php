@@ -30,24 +30,6 @@
 </head>
 <body>
 
-
-	<!-- Preloader -->
-	<div id="preloader">
-		<div id="loader">
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="lading"></div>
-		</div>
-	</div><!-- /#preloader -->
-	<!-- Preloader End-->
-
-
 	<!-- Main Menu -->
 	<div id="main-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
 
