@@ -46,9 +46,9 @@
 			<!-- Main navigation -->
 			<ul id="headernavigation" class="nav navbar-nav">
 				<li class="inactive"><a href="home.php">Events</a></li>
-        <li class="active"><a href="favoriten.php">Favoriten</a></li>
+        		<li class="active"><a href="favoriten.php">Favoriten</a></li>
 				<li class="inactive"><a href="account.php">Account</a></li>
-        <li class="inactive"><a href="index.php">Abmelden</a></li>
+        		<li class="inactive"><a href="index.php">Abmelden</a></li>
 			</ul> <!-- /.nav .navbar-nav -->
 		</nav> <!-- /.navbar-collapse  -->
 	</div><!-- /#main-menu -->
