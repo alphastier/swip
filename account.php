@@ -34,8 +34,7 @@
         $result = event_create($name, $text, $place, $starttime, $date, $price, $duration, $datetime);
         if($result){
           $success = true;
-          $success_msg = "Sie haben erfolgreich registriert.</br>
-          Bitte loggen Sie sich jetzt ein.</br>";
+          $success_msg = "Event wurde erfolgreich erstellt</br>";
         }
     }else{
       $error = true;
@@ -118,7 +117,7 @@
 
 				<!-- Event-Create-Formular -->
 <div  class="col-lg-12">
-	<h3>Mein Event planen</h3>
+	<h3>Mein Event erstellen</h3>
 	<form id="event-form" action="account.php" method="post" role="form" style="display: block;">
 		<div class="form-group">
 			<input type="text" name="name" id="name" tabindex="1" class="form-control" placeholder="Name" value="">
