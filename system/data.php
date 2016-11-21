@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	/* *******************************************************************************************************
 	/* data.php regelt die DB-Verbindung und fast den gesammten Datenverkehr der Site.
 	/* So ist die gesammte Datenorganisation an einem Ort, was den Verwaltungsaufwand erheblich verringert.
@@ -62,6 +62,7 @@
 	}
 
 
+
 	/* *********************************************************
 	/* Event-bearbeiten
 
@@ -75,6 +76,16 @@ function get_event($event_id){
 $sql = "SELECT * FROM events WHERE event_id = $event_id;";
 return get_result($sql);
 }
+
+	/* *********************************************************
+	/* Get Event 
+	/* ****************************************************** */
+
+	function get_all_events(){
+		$sql = "SELECT * FROM events ;";
+		return get_result($sql);
+	}
+
 
 	/* *********************************************************
 	/* Home

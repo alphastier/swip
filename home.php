@@ -1,3 +1,27 @@
+<?php
+  session_start();
+	if(!isset($_SESSION['user_id'])){
+		header("Location:index.php");
+	}else{
+  	$user_id = $_SESSION['user_id'];
+	}
+
+	// externe Dateien Laden
+	// data.php beinhaltet alle DB-Anweisungen wie SELECT, INSERT, UPDATE, etc.
+	// Funktionen in data.php liefern das Ergebnis der Anweisungen zurück
+	// security.php enthält sicherheitsrelevante Funktionen
+	require_once("system/data.php");
+	require_once("system/security.php");
+
+  // für Spätere Verwendung initialisieren wir die Variablen $error, $error_msg, $success, $success_msg
+  $error = false;
+  $error_msg = "";
+  $success = false;
+  $success_msg = "";
+  
+  $eventlist = get_all_events();
+  ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,112 +92,37 @@
 					</span>
 				</h3><!-- /.section-name -->
 
+				<?php while($event = mysqli_fetch_assoc($eventlist)) { ?>
+
 				<!-- Event List -->
 			 	<div class="panel-group" id="accordion">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-        Event 1</a>
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" name="name" value="<?php echo $event['name']; ?>"></a>
         <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date">23.12.16</a>
-        <a class="event-price">50 CHF</a>
+        <a class="event-date" name="date" value="<?php echo $event['date']; ?>"></a>
+        <a class="event-price" name="price" value="<?php echo $event['price']; ?>"></a>
       </h4>
     </div>
     <div id="collapse1" class="panel-collapse collapse in">
       <div class="panel-body">
-      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
-        <p class="event-duration">Dauert 2 Stunden.</p>
-      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p><br>
+      	<p class="event-starttime" name="starttime" value="<?php echo $event['starttime']; ?>"></p>
+        <p class="event-duration" name="duration" value="<?php echo $event['duration']; ?>"></p>
+      	<p class="event-place" name="place" value="<?php echo $event['place']; ?>"></p>
+        <p class="event-font" name="text" value="<?php echo $event['text']; ?>"></p><br>
       </div>
     </div>
   </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-        Event 2</a>
-        <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date">23.12.16</a>
-        <a class="event-price">50 CHF</a>
-      </h4>
-    </div>
-    <div id="collapse2" class="panel-collapse collapse">
-      <div class="panel-body">
-      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
-        <p class="event-duration">Dauert 2 Stunden.</p>
-      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p><br>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-        Event 3</a>
-        <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date">23.12.16</a>
-        <a class="event-price">50 CHF</a>
-      </h4>
-    </div>
-    <div id="collapse3" class="panel-collapse collapse">
-      <div class="panel-body">
-      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
-        <p class="event-duration">Dauert 2 Stunden.</p>
-      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p><br>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-        Event 4</a>
-        <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date">23.12.16</a>
-        <a class="event-price">50 CHF</a>
-      </h4>
-    </div>
-    <div id="collapse4" class="panel-collapse collapse">
-      <div class="panel-body">
-      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
-        <p class="event-duration">Dauert 2 Stunden.</p>
-      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p><br>
-      </div>
-    </div>
-  </div><div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
-        Event 5</a>
-        <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date">23.12.16</a>
-        <a class="event-price">50 CHF</a>
-      </h4>
-    </div>
-    <div id="collapse5" class="panel-collapse collapse">
-      <div class="panel-body">
-      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
-        <p class="event-duration">Dauert 2 Stunden.</p>
-      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p><br>
-      </div>
+</div>
+
+<?php } ?>
+
+</div>
     </div>
   </section>
+  
+  
 
 		<!-- Footer Section -->
 		<footer id="footer-section">
@@ -184,9 +133,6 @@
 		<!-- Footer Section End -->
 
         <!-- WhatsNear Map -->
-
-
-
 
 		<!-- jQuery Library -->
 		<script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
