@@ -15,7 +15,7 @@
   $error_msg = "";
   $success = false;
   $success_msg = "";
-  
+
   // Event erstellen
   if(isset($_POST['event_create'])){
     // Kontrolle mit isset, ob email und password ausgefüllt wurde
@@ -30,7 +30,7 @@
 	  $price = filter_data($_POST['price']);
 	  $duration = filter_data($_POST['duration']);
       $datetime = filter_data($_POST['datetime']);
-      
+
         $result = event_create($name, $text, $place, $starttime, $date, $price, $duration, $datetime);
         if($result){
           $success = true;
@@ -250,5 +250,18 @@
 			</p>
 		</footer>
 		<!-- Footer Section End -->
+		
+		<!-- jQuery Library -->
+		<script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
+		<!-- Modernizr js -->
+		<script type="text/javascript" src="assets/js/modernizr-2.8.0.min.js"></script>
+		<!-- Plugins -->
+		<script type="text/javascript" src="assets/js/plugins.js"></script>
+		<!-- Custom JavaScript Functions -->
+		<script type="text/javascript" src="assets/js/functions.js"></script>
+		<!-- Custom JavaScript Functions -->
+		<script type="text/javascript" src="assets/js/jquery.ajaxchimp.min.js"></script>
+
+
 	</body>
 	</html>
