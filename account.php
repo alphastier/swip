@@ -236,6 +236,7 @@
         </div>
 
         <div class="modal-footer">
+					<input type="submit" class="btn btn-default" value="Event löschen" />
           <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Abbrechen</button>
           <button type="submit" class="btn btn-success btn-sm" name="update-submit">Änderungen speichern</button>
         </div>
