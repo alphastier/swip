@@ -1,3 +1,48 @@
+<?php
+  session_start();
+	if(isset($_SESSION['id'])) unset($_SESSION['id']);
+	session_destroy();
+
+	// externe Dateien Laden
+	// data.php beinhaltet alle DB-Anweisungen wie SELECT, INSERT, UPDATE, etc.
+	// Funktionen in data.php liefern das Ergebnis der Anweisungen zurück
+	// security.php enthält sicherheitsrelevante Funktionen
+	require_once("system/data.php");
+	require_once("system/security.php");
+
+  // für Spätere Verwendung initialisieren wir die Variablen $error, $error_msg, $success, $success_msg
+  $error = false;
+  $error_msg = "";
+  $success = false;
+  $success_msg = "";
+  
+  // Event erstellen
+  if(isset($_POST['event_create'])){
+    // Kontrolle mit isset, ob email und password ausgefüllt wurde
+    if(!empty($_POST['name']) && !empty($_POST['text']) && !empty($_POST['place']) && !empty($_POST['starttime'])&& !empty($_POST['date'])&& !empty($_POST['price'])&& !empty($_POST['duration'])&& !empty($_POST['datetime'])){
+
+      // Werte aus POST-Array auf SQL-Injections prüfen und in Variablen schreiben
+      $name = filter_data($_POST['name']);
+      $text = filter_data($_POST['text']);
+      $place = filter_data($_POST['place']);
+	  $starttime = filter_data($_POST['starttime']);
+      $date = filter_data($_POST['date']);
+	  $price = filter_data($_POST['price']);
+	  $duration = filter_data($_POST['duration']);
+      $datetime = filter_data($_POST['datetime']);
+      
+        $result = event_create($name, $text, $place, $starttime, $date, $price, $duration, $datetime);
+        if($result){
+          $success = true;
+          $success_msg = "Sie haben erfolgreich registriert.</br>
+          Bitte loggen Sie sich jetzt ein.</br>";
+        }
+    }else{
+      $error = true;
+      $error_msg .= "Bitte füllen Sie alle Felder aus.</br>";
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -220,22 +265,5 @@
 			</p>
 		</footer>
 		<!-- Footer Section End -->
-
-        <!-- WhatsNear Map -->
-
-
-
-
-		<!-- jQuery Library -->
-		<script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
-		<!-- Modernizr js -->
-		<script type="text/javascript" src="assets/js/modernizr-2.8.0.min.js"></script>
-		<!-- Plugins -->
-		<script type="text/javascript" src="assets/js/plugins.js"></script>
-		<!-- Custom JavaScript Functions -->
-		<script type="text/javascript" src="assets/js/functions.js"></script>
-		<!-- Custom JavaScript Functions -->
-		<script type="text/javascript" src="assets/js/jquery.ajaxchimp.min.js"></script>
-
 	</body>
 	</html>
