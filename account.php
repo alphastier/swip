@@ -1,3 +1,48 @@
+<?php
+  session_start();
+	if(isset($_SESSION['id'])) unset($_SESSION['id']);
+	session_destroy();
+
+	// externe Dateien Laden
+	// data.php beinhaltet alle DB-Anweisungen wie SELECT, INSERT, UPDATE, etc.
+	// Funktionen in data.php liefern das Ergebnis der Anweisungen zurück
+	// security.php enthält sicherheitsrelevante Funktionen
+	require_once("system/data.php");
+	require_once("system/security.php");
+
+  // für Spätere Verwendung initialisieren wir die Variablen $error, $error_msg, $success, $success_msg
+  $error = false;
+  $error_msg = "";
+  $success = false;
+  $success_msg = "";
+  
+  // Event erstellen
+  if(isset($_POST['event_create'])){
+    // Kontrolle mit isset, ob email und password ausgefüllt wurde
+    if(!empty($_POST['name']) && !empty($_POST['text']) && !empty($_POST['place']) && !empty($_POST['starttime'])&& !empty($_POST['date'])&& !empty($_POST['price'])&& !empty($_POST['duration'])&& !empty($_POST['datetime'])){
+
+      // Werte aus POST-Array auf SQL-Injections prüfen und in Variablen schreiben
+      $name = filter_data($_POST['name']);
+      $text = filter_data($_POST['text']);
+      $place = filter_data($_POST['place']);
+	  $starttime = filter_data($_POST['starttime']);
+      $date = filter_data($_POST['date']);
+	  $price = filter_data($_POST['price']);
+	  $duration = filter_data($_POST['duration']);
+      $datetime = filter_data($_POST['datetime']);
+      
+        $result = event_create($name, $text, $place, $starttime, $date, $price, $duration, $datetime);
+        if($result){
+          $success = true;
+          $success_msg = "Sie haben erfolgreich registriert.</br>
+          Bitte loggen Sie sich jetzt ein.</br>";
+        }
+    }else{
+      $error = true;
+      $error_msg .= "Bitte füllen Sie alle Felder aus.</br>";
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -128,7 +173,7 @@
 		<div class="panel-heading">
 			<h4 class="panel-title">
 				<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Event 1</a>
-				<button type="button" class="btn-default .btn-m"><span>Bearbeiten</span></button>
+        <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#myModal">Bearbeiten</button>
 					<a class="event-date">23.12.16</a>
 						<a class="event-price">50 CHF</a>
 			</h4>
@@ -147,6 +192,70 @@
 </div>
 
 
+<!-- Event-Modalform -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form enctype="multipart/form-data" action="<?PHP echo $_SERVER['PHP_SELF'] ?>" method="post">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Dieser Event</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group row">
+            <label for="Gender" class="col-sm-2 form-control-label">Anrede</label>
+            <div class="col-sm-5">
+              <select class="form-control form-control-sm" id="Gender" name="gender">
+                <option  value="">--</option>
+                <option  value="Frau">Frau</option>
+                <option  value="Herr">Herr</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="Vorname" class="col-sm-2 col-xs-12 form-control-label">Name</label>
+            <div class="col-sm-5 col-xs-6">
+              <input  type="text" class="form-control form-control-sm"
+                      id="Vorname" placeholder="Vorname"
+                      name="firstname" value=" ">
+            </div>
+            <div class="col-sm-5 col-xs-6">
+              <input  type="text" class="form-control form-control-sm"
+                      id="Nachname" placeholder="Nachname"
+                      name="lastname" value=" ">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="Email" class="col-sm-2 form-control-label">E-Mail</label>
+            <div class="col-sm-10">
+              <input  type="email" class="form-control form-control-sm"
+                      id="Email" placeholder="E-Mail"
+                      name="email" value=" ">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="Passwort" class="col-sm-2 form-control-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control form-control-sm" id="Passwort" placeholder="Passwort" name="password">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="Passwort_Conf" class="col-sm-2 form-control-label">Passwort bestätigen</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control form-control-sm" id="Passwort_Conf" placeholder="Passwort" name="confirm-password">
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Abbrechen</button>
+          <button type="submit" class="btn btn-success btn-sm" name="update-submit">Änderungen speichern</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
   </section>
 
 		<!-- Footer Section -->
@@ -156,22 +265,5 @@
 			</p>
 		</footer>
 		<!-- Footer Section End -->
-
-        <!-- WhatsNear Map -->
-
-
-
-
-		<!-- jQuery Library -->
-		<script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
-		<!-- Modernizr js -->
-		<script type="text/javascript" src="assets/js/modernizr-2.8.0.min.js"></script>
-		<!-- Plugins -->
-		<script type="text/javascript" src="assets/js/plugins.js"></script>
-		<!-- Custom JavaScript Functions -->
-		<script type="text/javascript" src="assets/js/functions.js"></script>
-		<!-- Custom JavaScript Functions -->
-		<script type="text/javascript" src="assets/js/jquery.ajaxchimp.min.js"></script>
-
 	</body>
 	</html>
