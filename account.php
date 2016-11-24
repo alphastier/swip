@@ -162,7 +162,7 @@
 			<input type="text" name="place" id="place" tabindex="3" class="form-control" placeholder="Ort">
 		</div>
 		<div class="form-group">
-			<input type="time" name="starttime" id="starttime" tabindex="4" class="form-control" placeholder="HH.MM.SS.">
+			<input type="time" name="starttime" id="starttime" tabindex="4" class="form-control" placeholder="SS.MM.HH.">
 		</div>
 		<div class="form-group">
 			<input type="date" name="date" id="date" tabindex="5" class="form-control" placeholder="YYYY.MM.DD.">
