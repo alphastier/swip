@@ -126,11 +126,15 @@ function update_event($user_id, $event_id, $name, $text, $place, $starttime, $da
 
 
 	/* *********************************************************
+<<<<<<< HEAD
 	/* Get Event
+=======
+	/* Alle Events anzeigen
+>>>>>>> 96d037568ca12fe6d4232bf7d559e210028cd4b3
 	/* ****************************************************** */
 
 	function get_all_events(){
-		$sql = "SELECT * FROM events ;";
+		$sql = "SELECT * FROM events ORDER BY Date ASC, Starttime Asc;";
 		return get_result($sql);
 	}
 

@@ -95,32 +95,33 @@
 				<?php while($event = mysqli_fetch_assoc($eventlist)) { ?>
 
 				<!-- Event List -->
-			 	<div class="panel-group" id="accordion">
+<div class="panel-group" id="accordion">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" name="name" value="<?php echo $event['name']; ?>"></a>
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" name="name"><?php echo $event['name']; ?></a>
         <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date" name="date" value="<?php echo $event['date']; ?>"></a>
-        <a class="event-price" name="price" value="<?php echo $event['price']; ?>"></a>
+        <a class="event-date" name="date"><?php echo $event['date']; ?></a>
+        <a class="event-price" name="price"><?php echo $event['price']; ?> CHF</a>
       </h4>
     </div>
     <div id="collapse1" class="panel-collapse collapse in">
       <div class="panel-body">
-      	<p class="event-starttime" name="starttime" value="<?php echo $event['starttime']; ?>"></p>
-        <p class="event-duration" name="duration" value="<?php echo $event['duration']; ?>"></p>
-      	<p class="event-place" name="place" value="<?php echo $event['place']; ?>"></p>
-        <p class="event-font" name="text" value="<?php echo $event['text']; ?>"></p><br>
+      	<p class="event-starttime" name="starttime"><?php echo $event['starttime']; ?></p>
+        <p class="event-duration" name="duration"><?php echo $event['duration']; ?>h</p>
+      	<p class="event-place" name="place"><b><?php echo $event['place']; ?></b></p>
+        <p class="event-font" name="text"><?php echo $event['text']; ?></p><br>
       </div>
     </div>
   </div>
 </div>
-
 <?php } ?>
-
 </div>
+ 
     </div>
+     
   </section>
+
   
   
 
