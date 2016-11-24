@@ -78,11 +78,11 @@ return get_result($sql);
 }
 
 	/* *********************************************************
-	/* Get Event 
+	/* Alle Events anzeigen
 	/* ****************************************************** */
 
 	function get_all_events(){
-		$sql = "SELECT * FROM events ;";
+		$sql = "SELECT * FROM events ORDER BY Date ASC, Starttime Asc;";
 		return get_result($sql);
 	}
 
