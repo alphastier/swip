@@ -65,12 +65,12 @@
 	/* Favorite create
 	/* ****************************************************** */
 
-	
+
 	function favorite_create($user_id, $event_id){
 	    $sql = "INSERT INTO fue-relation (user_id, event_id) VALUES ('$user_id', '$event_id');";
 		return get_result($sql);
 	}
-	
+
 
 	/* *********************************************************
 	/* Favoriten anzeigen
@@ -79,7 +79,7 @@
 	$sql = "SELECT * FROM events WHERE user_id = $user_id;";
 	return get_result($sql);
 	}
-	
+
 
 	/* *********************************************************
 	/* Event-bearbeiten
@@ -93,7 +93,6 @@
 	$sql = "SELECT * FROM events WHERE event_id = $event_id;";
 	return get_result($sql);
 	}
-
 
 function update_event($user_id, $event_id, $name, $text, $place, $starttime, $date, $price, $duration){
   	$sql_ok = false;
@@ -142,7 +141,13 @@ function update_event($user_id, $event_id, $name, $text, $place, $starttime, $da
   	}
   }
 
-
+	/* *********************************************************
+	/* Event löschen
+	/* ****************************************************** */
+	function delete_event($event_id){
+	$sql = "DELETE FROM events WHERE event_id = $event_id ;";
+	return get_result($sql);
+}
 
 	/* *********************************************************
 	/* Alle Events anzeigen
