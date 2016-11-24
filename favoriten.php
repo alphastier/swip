@@ -1,3 +1,13 @@
+<?php
+  session_start();
+	if(!isset($_SESSION['user_id'])){
+		header("Location:index.php");
+	}else{
+  	$user_id = $_SESSION['user_id'];
+	}
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
