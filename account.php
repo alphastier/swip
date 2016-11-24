@@ -13,6 +13,9 @@
 	require_once("system/data.php");
 	require_once("system/security.php");
 
+
+
+
   // für Spätere Verwendung initialisieren wir die Variablen $error, $error_msg, $success, $success_msg
   $error = false;
   $error_msg = "";
@@ -20,20 +23,20 @@
   $success_msg = "";
 
   // Event erstellen
-  if(isset($_POST['event_create'])){
+    if(isset($_POST['event_create'])){
 
-    // Kontrolle mit isset, ob email und password ausgefüllt wurde
+    // Kontrolle mit isset, ob felder ausgefüllt wurde
     if(!empty($_POST['name']) && !empty($_POST['text']) && !empty($_POST['place']) && !empty($_POST['starttime'])&& !empty($_POST['date'])&& !empty($_POST['price'])&& !empty($_POST['duration'])){
 
       // Werte aus POST-Array auf SQL-Injections prüfen und in Variablen schreiben
       $user_id = $_SESSION['user_id'];
-	  $name = filter_data($_POST['name']);
+	    $name = filter_data($_POST['name']);
       $text = filter_data($_POST['text']);
       $place = filter_data($_POST['place']);
-	  $starttime = filter_data($_POST['starttime']);
+	    $starttime = filter_data($_POST['starttime']);
       $date = filter_data($_POST['date']);
-	  $price = filter_data($_POST['price']);
-	  $duration = filter_data($_POST['duration']);
+	    $price = filter_data($_POST['price']);
+	    $duration = filter_data($_POST['duration']);
 
       $result = event_create($user_id, $name, $text, $place, $starttime, $date, $price, $duration);
         if($result){
@@ -46,9 +49,24 @@
     }
   }
 
-  $eventlist = get_events_by_user($user_id);
   //echo count($eventlist);
 
+  // Event bearbeiten Button
+     if(isset($_POST['update-submit'])){
+      $name = filter_data($_POST['name']);
+      $text = filter_data($_POST['text']);
+      $place = filter_data($_POST['place']);
+      $starttime = filter_data($_POST['starttime']);
+      $date = filter_data($_POST['date']);
+      $price = filter_data($_POST['price']);
+      $duration = filter_data($_POST['duration']);
+      $event_id = $_POST['event_id'];
+
+
+      $result = update_event($user_id, $event_id, $name, $text, $place, $starttime, $date, $price, $duration);
+  }
+
+  $eventlist = get_events_by_user($user_id);
 ?>
 
 <!DOCTYPE html>
@@ -194,6 +212,7 @@ while($event = mysqli_fetch_assoc($eventlist)){
           <h4 class="modal-title" id="myModalLabel">Dieser Event</h4>
         </div>
         <div class="modal-body">
+          <input type="hidden" name="event_id" value="<?php echo $event['event_id']; ?>">
 
           <div class="form-group row">
             <label for="Name" class="col-sm-2 col-xs-12 form-control-label">Name</label>
