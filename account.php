@@ -65,6 +65,12 @@
       $result = update_event($user_id, $event_id, $name, $text, $place, $starttime, $date, $price, $duration);
   }
 
+    //Event löschen
+    if(isset($_POST['event_delete'])){
+      $delete_id = $_POST['event_delete'];
+      delete_event($delete_id);
+    }
+
   $eventlist = get_events_by_user($user_id);
 ?>
 
@@ -155,7 +161,7 @@
 			<input type="text" name="place" id="place" tabindex="3" class="form-control" placeholder="Ort">
 		</div>
 		<div class="form-group">
-			<input type="time" name="starttime" id="starttime" tabindex="4" class="form-control" placeholder="HH.MM.SS.">
+			<input type="time" name="starttime" id="starttime" tabindex="4" class="form-control" placeholder="SS.MM.HH.">
 		</div>
 		<div class="form-group">
 			<input type="date" name="date" id="date" tabindex="5" class="form-control" placeholder="YYYY.MM.DD.">
@@ -262,7 +268,7 @@ while($event = mysqli_fetch_assoc($eventlist)){
         </div>
 
         <div class="modal-footer">
-					<input type="submit" class="btn btn-default" value="Event löschen" />
+					<button type="submit" class="btn btn-danger btn-sm" name="event_delete" value="<?php echo $event['event_id'];?>">Event löschen</button>
           <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Abbrechen</button>
           <button type="submit" class="btn btn-success btn-sm" name="update-submit">Änderungen speichern</button>
         </div>

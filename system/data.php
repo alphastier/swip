@@ -68,7 +68,7 @@
 	    $sql = "INSERT INTO fue_relation (user_id, event_id) VALUES ($user_id, $event_id);";
 		return get_result($sql);
 	}
-	
+
 
 	/* *********************************************************
 	/* Favoriten anzeigen
@@ -78,8 +78,6 @@
 	(SELECT event_id FROM fue_relation WHERE user_id = $user_id)";
 	return get_result($sql);
 	}
-	
-	
 
 	/* *********************************************************
 	/* Event-bearbeiten
@@ -141,7 +139,13 @@ function update_event($user_id, $event_id, $name, $text, $place, $starttime, $da
   	}
   }
 
-
+	/* *********************************************************
+	/* Event löschen
+	/* ****************************************************** */
+	function delete_event($event_id){
+	$sql = "DELETE FROM events WHERE event_id = $event_id ;";
+	return get_result($sql);
+}
 
 	/* *********************************************************
 	/* Alle Events anzeigen
