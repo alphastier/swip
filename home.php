@@ -131,9 +131,6 @@
      
   </section>
 
-  
-  
-
 		<!-- Footer Section -->
 		<footer id="footer-section">
 			<p class="copyright">
@@ -154,18 +151,6 @@
 		<script type="text/javascript" src="assets/js/functions.js"></script>
 		<!-- Custom JavaScript Functions -->
 		<script type="text/javascript" src="assets/js/jquery.ajaxchimp.min.js"></script>
-		<script>
-		$('.button').click(function() {
-
- $.ajax({
-  type: "POST",
-  url: "data.php",
-  data: { name: "John" }
-}).done(function( msg ) {
-  alert( "Data Saved: " + msg );
-});    
-
-    });
-		</script>
+		
 	</body>
 	</html>

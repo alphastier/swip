@@ -5,7 +5,6 @@
 	}else{
   	$user_id = $_SESSION['user_id'];
 	}
-	// echo $user_id;
 	// externe Dateien Laden
 	// data.php beinhaltet alle DB-Anweisungen wie SELECT, INSERT, UPDATE, etc.
 	// Funktionen in data.php liefern das Ergebnis der Anweisungen zurück

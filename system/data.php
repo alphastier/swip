@@ -30,7 +30,7 @@
 	function get_result($sql)
 	{
 		$db = get_db_connection();
-     //echo $sql ."<br>";
+     	echo $sql ."<br>";
 		$result = mysqli_query($db, $sql);
 		mysqli_close($db);
 		return $result;
@@ -64,10 +64,8 @@
 	/* *********************************************************
 	/* Favorite create
 	/* ****************************************************** */
-
-	
 	function favorite_create($user_id, $event_id){
-	    $sql = "INSERT INTO fue-relation (user_id, event_id) VALUES ('$user_id', '$event_id');";
+	    $sql = "INSERT INTO fue_relation (user_id, event_id) VALUES ($user_id, $event_id);";
 		return get_result($sql);
 	}
 	
@@ -75,10 +73,12 @@
 	/* *********************************************************
 	/* Favoriten anzeigen
 	/* ****************************************************** */
-	function get_favorites_by_user($fav_id){
-	$sql = "SELECT * FROM events WHERE user_id = $user_id;";
+	function get_favorites_by_user($user_id){
+	$sql = "SELECT * FROM events WHERE event_id IN
+	(SELECT event_id FROM fue_relation WHERE user_id = $user_id)";
 	return get_result($sql);
 	}
+	
 	
 
 	/* *********************************************************
@@ -93,7 +93,6 @@
 	$sql = "SELECT * FROM events WHERE event_id = $event_id;";
 	return get_result($sql);
 	}
-
 
 function update_event($user_id, $event_id, $name, $text, $place, $starttime, $date, $price, $duration){
   	$sql_ok = false;
