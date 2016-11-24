@@ -67,7 +67,7 @@
 
     //Event löschen
     if(isset($_POST['event_delete'])){
-      $delete_id = $_POST['event_delete'];
+      $delete_id = $_POST['event_id'];
       delete_event($delete_id);
     }
 

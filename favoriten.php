@@ -19,6 +19,12 @@
   $success = false;
   $success_msg = "";
   
+  // Favorit löschen
+    if(isset($_POST['eventid_submit'])){
+      $delete_fav = $_POST['favorite_delete'];
+      delete_favorite($delete_fav);
+    }
+  
   $favorites = get_favorites_by_user($user_id);
 ?>
 
@@ -101,7 +107,8 @@
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" name="name"><?php echo $event['name']; ?></a>
-        <button type="button" class="btn-default .btn-m"><span>X</span></button>
+        <input type="hidden" name="eventid_submit" value="<?php echo $event['event_id']; ?>">
+        <button type="submit" class="btn-default .btn-m" name="favorite_delete"><span>X</span></button>
         <a class="event-date" name="date"><?php echo $event['date']; ?></a>
         <a class="event-price" name="price"><?php echo $event['price']; ?> CHF</a>
       </h4>

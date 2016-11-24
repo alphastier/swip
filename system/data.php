@@ -143,8 +143,18 @@ function update_event($user_id, $event_id, $name, $text, $place, $starttime, $da
 	/* Event löschen
 	/* ****************************************************** */
 	function delete_event($event_id){
-	$sql = "DELETE FROM events WHERE event_id = $event_id ;";
+	$sql = "DELETE FROM events WHERE event_id = $event_id;";
 	return get_result($sql);
+}
+
+	/* *********************************************************
+	/* Favorit löschen
+	/* ****************************************************** */
+
+	function delete_favorite($event_id){
+	$sql = "DELETE FROM fue_relation WHERE event_id = $event_id;";
+	return get_result($sql);
+	echo "test2";
 }
 
 	/* *********************************************************
