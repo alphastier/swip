@@ -78,111 +78,34 @@
 					</span>
 				</h3><!-- /.section-name -->
 
+				<?php while($event = mysqli_fetch_assoc($favorites)) { ?>
+
 				<!-- Event List -->
-			 	<div class="panel-group" id="accordion">
+<div class="panel-group" id="accordion">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-        Event 1</a>
-        <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date">23.12.16</a>
-        <a class="event-price">50 CHF</a>
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" name="name"><?php echo $event['name']; ?></a>
+        <button type="button" class="btn-default .btn-m"><span>X</span></button>
+        <a class="event-date" name="date"><?php echo $event['date']; ?></a>
+        <a class="event-price" name="price"><?php echo $event['price']; ?> CHF</a>
       </h4>
     </div>
     <div id="collapse1" class="panel-collapse collapse in">
       <div class="panel-body">
-      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
-        <p class="event-duration">Dauert 2 Stunden.</p>
-      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p><br>
+      	<p class="event-starttime" name="starttime"><?php echo $event['starttime']; ?></p>
+        <p class="event-duration" name="duration"><?php echo $event['duration']; ?>h</p>
+      	<p class="event-place" name="place"><b><?php echo $event['place']; ?></b></p>
+        <p class="event-font" name="text"><?php echo $event['text']; ?></p><br>
       </div>
     </div>
   </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-        Event 2</a>
-        <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date">23.12.16</a>
-        <a class="event-price">50 CHF</a>
-      </h4>
+</div>
+<?php } ?>
+</div>
+ 
     </div>
-    <div id="collapse2" class="panel-collapse collapse">
-      <div class="panel-body">
-      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
-        <p class="event-duration">Dauert 2 Stunden.</p>
-      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p><br>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-        Event 3</a>
-        <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date">23.12.16</a>
-        <a class="event-price">50 CHF</a>
-      </h4>
-    </div>
-    <div id="collapse3" class="panel-collapse collapse">
-      <div class="panel-body">
-      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
-        <p class="event-duration">Dauert 2 Stunden.</p>
-      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p><br>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
-        Event 4</a>
-        <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date">23.12.16</a>
-        <a class="event-price">50 CHF</a>
-      </h4>
-    </div>
-    <div id="collapse4" class="panel-collapse collapse">
-      <div class="panel-body">
-      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
-        <p class="event-duration">Dauert 2 Stunden.</p>
-      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p><br>
-      </div>
-    </div>
-  </div><div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
-        Event 5</a>
-        <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date">23.12.16</a>
-        <a class="event-price">50 CHF</a>
-      </h4>
-    </div>
-    <div id="collapse5" class="panel-collapse collapse">
-      <div class="panel-body">
-      	<p class="event-starttime">Beginnt um 18:30 Uhr.</p>
-        <p class="event-duration">Dauert 2 Stunden.</p>
-      	<p class="event-place"> Interlaken</p><p class="event-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</p><br>
-      </div>
-    </div>
+     
   </section>
 
 		<!-- Footer Section -->

@@ -19,7 +19,13 @@
   $success = false;
   $success_msg = "";
   
+  if (isset($_POST['fav_button'])) {
+	favorite_create($user_id, $_POST['eventid_submit']);
+  }
+  
   $eventlist = get_all_events();
+  
+  
   ?>
 
 <!DOCTYPE html>
@@ -99,10 +105,13 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" name="name"><?php echo $event['name']; ?></a>
-        <button type="button" class="btn-default .btn-m"><span>Fav</span></button>
-        <a class="event-date" name="date"><?php echo $event['date']; ?></a>
-        <a class="event-price" name="price"><?php echo $event['price']; ?> CHF</a>
+      	<form method="post">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" name="name"><?php echo $event['name']; ?></a>
+            <input type="hidden" name="eventid_submit" value="<?php echo $event['event_id']; ?>">
+            <button type="submit" class="btn-default .btn-m" name="fav_button"><span>Fav</span></button>
+            <a class="event-date" name="date"><?php echo $event['date']; ?></a>
+            <a class="event-price" name="price"><?php echo $event['price']; ?> CHF</a>
+        </form>
       </h4>
     </div>
     <div id="collapse1" class="panel-collapse collapse in">
@@ -145,6 +154,18 @@
 		<script type="text/javascript" src="assets/js/functions.js"></script>
 		<!-- Custom JavaScript Functions -->
 		<script type="text/javascript" src="assets/js/jquery.ajaxchimp.min.js"></script>
+		<script>
+		$('.button').click(function() {
 
+ $.ajax({
+  type: "POST",
+  url: "data.php",
+  data: { name: "John" }
+}).done(function( msg ) {
+  alert( "Data Saved: " + msg );
+});    
+
+    });
+		</script>
 	</body>
 	</html>
