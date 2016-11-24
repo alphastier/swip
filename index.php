@@ -202,7 +202,7 @@
 			</div>
 		</form>
 	</div>
-				<!-- Registrations-Formular -->
+				<!-- Ende Registrations-Formular -->
 
 <!-- Next-Button auskommentiert
 					<div id="time_countdown" class="time-count-container">
@@ -243,63 +243,6 @@
 	</section><!-- /#about -->
 	<!-- Event Section End -->
 
-
-
-<!-- Newsletter-File-auskommentiert
-
-		<section id="faq" class="section-style" data-background-image="images/background/newsletter.jpg">
-			<div class="pattern height-resize">
-				<div class="container">
-					<h3 class="section-name">
-						<span>
-							FAQ
-						</span>
-					</h3>
-					<h2 class="section-title">
-						Our Newsletter
-					</h2>
-					<p class="section-description">
-						Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-					</p>
-
-					<form class="news-letter" method="post">
-						<p class="alert-success"></p>
-						<p class="alert-warning"></p>
-
-						<div class="subscribe-hide">
-							<input class="form-control" type="email" id="subscribe-email" name="subscribe-email" placeholder="Email Address"  required>
-							<button  type="submit" id="subscribe-submit" class="btn"><i class="fa fa-envelope"></i></button>
-							<span id="subscribe-loading" class="btn"> <i class="fa fa-refresh fa-spin"></i> </span>
-							<div class="subscribe-error"></div>
-						</div>
-						<div class="subscribe-message"></div>
-					</form>
--->
-
-<!-- Social Media Buttons auskommentiert
-				<div class="social-btn-container">
-					<span class="social-btn-box">
-						<a href="#" class="facebook-btn">
-						<i class="fa fa-facebook"></i></a>
-					</span>
-
-					<span class="social-btn-box">
-						<a href="#" class="twitter-btn"><i class="fa fa-twitter"></i></a>
-					</span>
-
-					<span class="social-btn-box">
-						<a href="#" class="linkedin-btn"><i class="fa fa-linkedin"></i></a>
-					</span>
-
-					<span class="social-btn-box">
-						<a href="#" class="google-plus-btn"><i class="fa fa-google-plus"></i></a>
-					</span>
-
-					<span class="social-btn-box">
-						<a href="#" class="youtube-btn"><i class="fa fa-youtube"></i></a>
-					</span>
-				</div>
--->
 
 <!-- Next-Button auskommentiert
 					<div class="next-section">
