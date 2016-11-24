@@ -1,0 +1,10 @@
+diff a/index.php b/index.php	(rejected hunks)
+@@ -161,7 +161,7 @@
+ 				<!-- Login-Formular -->
+ 				<form id="login-form" action="index.php" method="post" role="form" style="display: block;">
+ 					<div class="form-group">
+-						<input type="text" name="username" id="email" tabindex="1" class="form-control" placeholder="User-Name" value="">
++						<input type="text" name="username" id="email" tabindex="1" class="form-control" placeholder="Benutzername" value="">
+ 					</div>
+ 					<div class="form-group">
+ 						<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Passwort">

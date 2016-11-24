@@ -93,9 +93,64 @@
 	$sql = "SELECT * FROM events WHERE event_id = $event_id;";
 	return get_result($sql);
 	}
+<<<<<<< HEAD
+=======
+
+function update_event($user_id, $event_id, $name, $text, $place, $starttime, $date, $price, $duration){
+  	$sql_ok = false;
+		echo "Hier der Name: $name<br>";
+  	$sql = "UPDATE events SET ";
+  	if($name != ""){
+  		$sql .= "name = '$name', ";
+  		$sql_ok = true;
+    }
+		if($text != ""){
+			$sql .= "text = '$text', ";
+			$sql_ok = true;
+		}
+		if($place != ""){
+			$sql .= "place = '$place', ";
+			$sql_ok = true;
+		}
+		if($starttime != ""){
+			$sql .= "starttime = '$starttime', ";
+			$sql_ok = true;
+		}
+		if($date != ""){
+			$sql .= "date = '$date', ";
+			$sql_ok = true;
+		}
+		if($price != ""){
+			$sql .= "price = '$price', ";
+			$sql_ok = true;
+		}
+		if($duration != ""){
+			$sql .= "duration = '$duration', ";
+			$sql_ok = true;
+		}
+
+
+    // Das Komma an der vorletzten Position des $sql-Strings durch ein Leerzeichen ersetzen
+    $sql = substr_replace($sql, ' ', -2, 1);
+
+    // $sql-String vervollständigen
+    $sql .= " WHERE event_id = $event_id;";
+
+  	if($sql_ok){
+  	  return get_result($sql);
+  	}else{
+  		return false;
+  	}
+  }
+
+>>>>>>> cf93c3137e9f17a37a177707aa924a987ecf2227
 
 	/* *********************************************************
+<<<<<<< HEAD
+	/* Get Event
+=======
 	/* Alle Events anzeigen
+>>>>>>> 96d037568ca12fe6d4232bf7d559e210028cd4b3
 	/* ****************************************************** */
 
 	function get_all_events(){
