@@ -93,8 +93,7 @@
 	$sql = "SELECT * FROM events WHERE event_id = $event_id;";
 	return get_result($sql);
 	}
-<<<<<<< HEAD
-=======
+
 
 function update_event($user_id, $event_id, $name, $text, $place, $starttime, $date, $price, $duration){
   	$sql_ok = false;
@@ -143,14 +142,10 @@ function update_event($user_id, $event_id, $name, $text, $place, $starttime, $da
   	}
   }
 
->>>>>>> cf93c3137e9f17a37a177707aa924a987ecf2227
+
 
 	/* *********************************************************
-<<<<<<< HEAD
-	/* Get Event
-=======
 	/* Alle Events anzeigen
->>>>>>> 96d037568ca12fe6d4232bf7d559e210028cd4b3
 	/* ****************************************************** */
 
 	function get_all_events(){
